@@ -1,19 +1,31 @@
 import { useState } from 'react'
-import About from './components/About/About';
+import data from './data.json'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [users, setusers] = useState(data)
 
-  const handleClick = () => {
-    setCount(count + 1)
+
+  const handleChange = () => {
+    setusers((prevUsers) => {
+      return prevUsers.map(elem => {
+        if (elem.name == "Jhon") {
+          elem.name = 'Karen'
+        }
+        return elem;
+      })
+    })
   }
 
   return (
     <div className='App'>
       <h1>Ract + VITE</h1>
-      <button onClick={handleClick}>count : {count}</button>
-      <About title='first props title from App' />
+      {
+        users.map(elem => {
+          return <h2 key={elem.id}>{elem.name}</h2>
+        })
+      }
+      <button onClick={handleChange}>change Jhon name</button>
     </div>
   )
 }
