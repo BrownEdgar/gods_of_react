@@ -12,6 +12,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Ract + VITE</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
       <button onClick={handleClick}>count : {count}</button>
       <About title='first props title from App' />
     </div>
