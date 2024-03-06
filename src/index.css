@@ -13,26 +13,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
+*{
   box-sizing: border-box;
 }
-
-body {
+body{
   max-width: 1440px;
   margin: 0 auto;
 }
 
-a {
+a{
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
-}
-
-button {
+button{
   border: 0;
   border-radius: 4px;
   cursor: pointer;
   padding: 0.6rem 1rem;
 }
+

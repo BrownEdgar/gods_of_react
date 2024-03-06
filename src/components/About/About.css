@@ -1,13 +1,22 @@
-.About__title {
-  color: orangered;
+.About__title{
+    text-align: center;
+    font-size: 32px;
+    font-weight:400;
+}
+.About__content{
+    display: flex;
+    gap: 24px;
+}
+.About__content img{
+    width: 640px;
+}
+p{
+    line-height: 28px;
+    margin-left: 18px;
+}
+p:first-child{
+    font-size: 18px;
 }
 
-.About__content {
-  display: flex;
-  gap: 24px;
-}
 
-.About__content img {
-  width: 340px;
 
-}
