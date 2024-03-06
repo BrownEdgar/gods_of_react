@@ -1,0 +1,16 @@
+.App>h1 {
+  text-align: center;
+  font-size: 4em;
+  color: royalblue;
+}
+
+.App>button {
+  color: #fff;
+  background-color: royalblue;
+  font-size: 18px;
+}
+
+.App>button:active {
+  scale: 0.95;
+  background-color: rgb(53, 86, 184);
+}

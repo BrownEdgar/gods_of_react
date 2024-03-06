@@ -1,0 +1,13 @@
+.About__title {
+  color: orangered;
+}
+
+.About__content {
+  display: flex;
+  gap: 24px;
+}
+
+.About__content img {
+  width: 340px;
+
+}
