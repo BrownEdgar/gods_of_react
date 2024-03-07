@@ -1,16 +1,16 @@
-.App>h1 {
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 90%;
+  justify-content: space-between;
+  row-gap: 15px;
+}
+.App div {
+  border: 1px solid green;
+  border-radius: 12px;
+  width: 400px;
   text-align: center;
-  font-size: 4em;
-  color: royalblue;
-}
-
-.App>button {
-  color: #fff;
-  background-color: royalblue;
-  font-size: 18px;
-}
-
-.App>button:active {
-  scale: 0.95;
-  background-color: rgb(53, 86, 184);
+  background-color: blueviolet;
+  color: aqua;
+  height: 200px;
 }
