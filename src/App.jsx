@@ -1,23 +1,18 @@
-import { useState } from 'react'
-import About from './components/About/About';
-import './App.css'
+import { useState } from "react";
+import data from "./data.json";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount(count + 1)
-  }
+  const [users] = useState(data);
 
   return (
-    <div className='App'>
-      <h1>Ract + VITE</h1>
-      <button onClick={handleClick}>count : {count}</button>
-      <About title='first props title from App' />
+    <div className="App">
+      <h1>users</h1>
+      {users.map((elem) => {
+        return <h2 key={elem.id}>{elem.name}</h2>;
+      })}
     </div>
-  )
+  );
 }
 
 export default App;
-
-
