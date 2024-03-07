@@ -1,18 +1,7 @@
-import { useState } from "react";
-import data from "./data.json";
-import "./App.css";
+import React from 'react'
 
-function App() {
-  const [users] = useState(data);
-
+export default function App() {
   return (
-    <div className="App">
-      <h1>users</h1>
-      {users.map((elem) => {
-        return <h2 key={elem.id}>{elem.name}</h2>;
-      })}
-    </div>
-  );
+    <div>App</div>
+  )
 }
-
-export default App;
