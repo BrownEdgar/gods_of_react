@@ -1,0 +1,17 @@
+.App{
+display: flex;
+gap:30px;
+flex-wrap: wrap;
+padding: 30px;
+width: 90%;
+margin: 0 auto;
+}
+.Todos{
+    border-radius: 6px;
+    padding: 1em;
+    text-align: left;
+    flex-basis: 30%;
+    color: #111;
+    background-color: whitesmoke;
+
+}
