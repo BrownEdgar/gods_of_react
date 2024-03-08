@@ -32,7 +32,6 @@
 
 .Todos__button :nth-child(1) {
   background-color: green;
-  
 }
 .Todos__button :nth-child(2) {
   background-color: red;
