@@ -5,8 +5,6 @@ export default function App() {
   const [count, setCount] = useState(1);
   const [posts, setPosts] = useState([])
 
-
-
   useEffect(() => {
 
     const getData = async () => {
@@ -14,17 +12,11 @@ export default function App() {
       const data = await response.json()
       setPosts(data)
     }
-
     getData()
   }, [])
 
-
-
-
   return (
     <div className='App'>
-
-
       {
         posts.map(elem => {
           return (
