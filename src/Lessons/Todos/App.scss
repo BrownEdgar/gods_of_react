@@ -1,0 +1,57 @@
+.App{
+    margin: 50px auto;
+    position: relative;
+    &__title{
+        text-align: center;
+        color: royalblue;
+        font-size: 3em;
+        & + p{
+            text-align: end;
+            font-size: 18px;
+            background-color: #666;
+            padding: 12px;
+            position: sticky;
+            top: 20px;
+            z-index: 99999;
+            span {
+                border-radius: 4px;
+                margin: 0 4px;
+                padding: 6px;
+                background-color: royalblue;
+                color: white;
+                font-size: 18px;
+            }
+        }
+    }
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        & > div{
+            
+            flex-basis: 32%;
+            padding: 1em;
+            background-color: #343434;
+            border-radius: 8px;
+            position: relative;
+            &:active{
+                scale: 0.97;
+                box-shadow: 0 0 10px 3px rgb(171, 163, 163, 0.18) inset;
+            }
+        }
+    }
+    &__circle{
+        position: absolute;
+        top: 10px;
+        border-radius: 50%;
+        right: 10px;
+        width: 16px;
+        height: 16px;
+        &-green{
+            background-color: rgb(15, 88, 15);
+        }
+        &-red{
+            background-color: #ff0404;
+        }
+    }
+}
