@@ -1,75 +1,82 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.scss";
-import classNames from "classnames";
+
+
+const data = [
+  {
+    id: 1,
+    title: "Terminator",
+    genre: "Action",
+    stock: 6,
+    rate: 2.5,
+  },
+  {
+    id: 2,
+    title: "Die Hard",
+    genre: "Action",
+    stock: 5,
+    rate: 2.5,
+  },
+  {
+    id: 3,
+    title: "Get Out",
+    genre: "Thriller",
+    stock: 8,
+    rate: 3.5,
+  },
+  {
+    id: 4,
+    title: "Trip to Italy",
+    genre: "Comedy",
+    stock: 7,
+    rate: 3.5,
+  },
+  {
+    id: 5,
+    title: "Airplane",
+    genre: "Comedy",
+    stock: 7,
+    rate: 3.5,
+  },
+];
 
 export default function App() {
-  const [todos, setTodos] = useState([]);
-  const [options, setOptions] = useState({
-    completed: 0,
-    unCompleted: 0,
-  });
+  const [list, setList] = useState(data);
 
-  useEffect(() => {
-    if (todos.length > 0) {
-      const obj = {
-        completed: 0,
-        unCompleted: 0,
-      };
-      todos.forEach((elem) => {
-        elem.completed ? (obj.completed += 1) : (obj.unCompleted += 1);
-      });
-      setOptions(obj);
-    }
-  }, [todos]);
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos?_limit=40")
-      .then((res) => res.json())
-      .then((data) => setTodos(data));
-  }, []);
-
-  const changeTrue = () => {
-    const result = todos.map((elem) => {
-      elem.completed = true;
-      return elem;
-    });
-    setTodos(result);
-  };
-
-  const togleCompleted = (id) => {
-    const res = todos.map((elem) => {
-      if (elem.id === id) {
-        elem.completed = !elem.completed;
-      }
-      return elem;
-    });
-    setTodos(res);
-  };
+  const update = (id) => {
+const copy = [...list]
+copy.splice(id, 1)
+setList(copy)
+  }
 
   return (
     <div className="App">
-      <h1 className="App__title">Our todos</h1>
-      <p>
-        <button onClick={changeTrue}>x</button>
-        complated:<span>{options.completed}</span>
-        unComplated:<span>{options.unCompleted}</span>
-      </p>
-      <div className="App__container">
-        {todos.map((elem) => {
-          return (
-            <div key={elem.id} onClick={() => togleCompleted(elem.id)}>
-              <h2>{elem.title}</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Stock</th>
+                <th>Rate</th>
+              </tr>
+            </thead>
 
-              <span
-                className={classNames("App__circle", {
-                  "App__circle-green": elem.completed,
-                  "App__circle-red": !elem.completed,
-                })}
-              ></span>
-            </div>
-          );
-        })}
-      </div>
+            <tbody>
+            {list.map((elem, id) => {
+                return(
+                    <tr key={elem.id}>
+                <td>{elem.title}</td>
+                <td>{elem.genre}</td>
+                <td>{elem.stock}</td>
+                <td>{elem.rate}</td>
+                <td className="App__btn" onClick={() => update(id)}>Delete</td>
+              </tr>
+                )
+            })}
+            </tbody>
+            
+          </table>
+        
     </div>
   );
 }
