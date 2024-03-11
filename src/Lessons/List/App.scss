@@ -1,0 +1,87 @@
+$main-text-color: #1d4c64;
+
+.App {
+  width: 80%;
+  margin: 100px auto;
+  &__content {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px 340px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    grid-column: 1/3;
+    position: relative;
+    padding-top: 50px;
+    h1 {
+      color: rgba($color: #1d4c64, $alpha: 1);
+      font-size: 46px;
+      margin-top: 20px;
+      line-height: 1.3;
+    }
+  }
+  &__news {
+    position: absolute;
+    top: 5px;
+    color: #10ce80;
+    font-style: italic;
+    font-weight: 700;
+  }
+  &__btn {
+    border-radius: 8px;
+    padding: 1em 2em;
+    font-size: 18px;
+    color: $main-text-color;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-left: 0;
+    &-outline {
+      background-color: transparent;
+      border: 2px solid $main-text-color;
+    }
+    &-peru {
+      background-color: rgb(255, 176, 97);
+      border: 0;
+    }
+    i {
+      margin-left: 5px;
+      position: relative;
+      top: 2px;
+      color: $main-text-color;
+    }
+  }
+  &__block {
+    position: relative;
+    background-color: #1d4c64;
+    background-image: url("https://images.unsplash.com/photo-1582284540020-8acbe03f4924?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 16px;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 5px;
+      border-radius: 24px;
+      background-color: #fff;
+      padding: 1.4em;
+      width: 86%;
+      position: absolute;
+      left: 7%;
+      bottom: -15%;
+      h2 {
+        color: $main-text-color;
+        font-size: 20px;
+      }
+      p {
+        color: grey;
+      }
+    }
+  }
+}
