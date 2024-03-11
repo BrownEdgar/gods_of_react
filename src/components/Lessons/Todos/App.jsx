@@ -11,6 +11,8 @@ export default function App() {
     unCompleted: 0
   })
 
+  const [sortOption, setSortOption] = useState(true)
+
   useEffect(() => {
     if (todos.length > 0) {
       const obj = {
@@ -51,6 +53,14 @@ export default function App() {
     setTodos(result)
   }
 
+  const handleSort = () => {
+    const arr1 = [];
+    const arr2 = [];
+    todos.forEach(elem => (elem.completed ? arr1 : arr2).push(elem))
+    setSortOption(!sortOption)
+    sortOption ? setTodos([...arr2, ...arr1]) : setTodos([...arr1, ...arr2])
+  }
+
   return (
     <div className='App'>
       <h1 className='App__title'>Our todos</h1>
@@ -58,6 +68,10 @@ export default function App() {
         <div className="App__buttons">
           <button onClick={() => setCompleted(true)}>All done</button>
           <button onClick={() => setCompleted(false)}>All undone</button>
+          <button onClick={handleSort}>
+            Sort
+            <i className='bx bx-sort-alt-2 bx-xs'></i>
+          </button>
         </div>
         <p>
           completed: <span> {options.completed}</span>
