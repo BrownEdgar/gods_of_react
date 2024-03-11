@@ -1,0 +1,74 @@
+$main-text-color: rgb(28, 67, 86);
+
+.App {
+  width: 80%;
+  margin: 100px auto;
+  &__content {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px 340px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+    grid-column: 1/3;
+    position: relative;
+    padding-top: 50px;
+    h1 {
+      color: $main-text-color;
+      font-size: 46px;
+      margin-top: 20px;
+      line-height: 1.3;
+
+    }
+  }
+  &__news {
+    position: absolute;
+    top: 5px;
+    color: rgb(61, 188, 152);
+    font-style: italic;
+    font-weight: 700;
+  }
+  &__btn {
+    border-radius: 8px;
+    padding: 1em 2em;
+    font-size: 18px;
+    border: 2px solid $main-text-color;
+    text-transform: capitalize;
+    color: $main-text-color;
+    font-weight: 700;
+    i {
+      margin-left: 5px;
+      color: $main-text-color;
+      position: relative;
+      top: 2px;
+    }
+  }
+  &__block {
+    position: relative;
+    background-color: blue;
+    background-image: url(https://img.freepik.com/premium-photo/photo-green-cabbage-vegetable-vibrant-colors-dark-background-macro_877288-164.jpg);
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-radius: 24px;
+      background-color: white;
+      padding: 1.4em;
+      width: 90%;
+      position: absolute;
+      left: 5%;
+      bottom: -5%;
+      h2{
+        color: $main-text-color;
+        font-size: 20px;
+      }
+      p {
+        color: gray;
+      }
+    }
+  }
+}

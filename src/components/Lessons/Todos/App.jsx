@@ -54,6 +54,7 @@ export default function App() {
   }
 
   const handleSort = () => {
+    if (Object.values(options).includes(0)) return;
     const arr1 = [];
     const arr2 = [];
     todos.forEach(elem => (elem.completed ? arr1 : arr2).push(elem))
