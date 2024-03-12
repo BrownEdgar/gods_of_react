@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.scss";
 
-
 const data = [
   {
     id: 1,
@@ -44,39 +43,40 @@ export default function App() {
   const [list, setList] = useState(data);
 
   const update = (id) => {
-const copy = [...list]
-copy.splice(id, 1)
-setList(copy)
-  }
+    const copy = [...list];
+    copy.splice(id, 1);
+    setList(copy);
+  };
+  
 
   return (
     <div className="App">
-          <table>
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Genre</th>
-                <th>Stock</th>
-                <th>Rate</th>
-              </tr>
-            </thead>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Stock</th>
+            <th>Rate</th>
+          </tr>
+        </thead>
 
-            <tbody>
-            {list.map((elem, id) => {
-                return(
-                    <tr key={elem.id}>
+        <tbody>
+          {list.map((elem, id) => {
+            return (
+              <tr key={elem.id}>
                 <td>{elem.title}</td>
                 <td>{elem.genre}</td>
                 <td>{elem.stock}</td>
                 <td>{elem.rate}</td>
-                <td className="App__btn" onClick={() => update(id)}>Delete</td>
+                <td className="App__btn" onClick={() => update(id)}>
+                  Delete
+                </td>
               </tr>
-                )
-            })}
-            </tbody>
-            
-          </table>
-        
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 }
