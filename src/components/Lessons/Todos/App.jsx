@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
+
 import './App.scss'
-
-
 
 export default function App() {
   const [todos, setTodos] = useState([]);
@@ -10,8 +9,7 @@ export default function App() {
     completed: 0,
     unCompleted: 0
   })
-
-  const [sortOption, setSortOption] = useState(true)
+  const [sortOption, setsortOption] = useState(true)
 
   useEffect(() => {
     if (todos.length > 0) {
@@ -25,9 +23,6 @@ export default function App() {
       setOptions(obj)
     }
   }, [todos])
-
-
-
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/todos')
@@ -52,19 +47,20 @@ export default function App() {
     })
     setTodos(result)
   }
-
   const handleSort = () => {
     if (Object.values(options).includes(0)) return;
     const arr1 = [];
     const arr2 = [];
     todos.forEach(elem => (elem.completed ? arr1 : arr2).push(elem))
-    setSortOption(!sortOption)
     sortOption ? setTodos([...arr2, ...arr1]) : setTodos([...arr1, ...arr2])
+    setsortOption(!sortOption)
   }
 
   return (
     <div className='App'>
-      <h1 className='App__title'>Our todos</h1>
+      <h1 className='App__title'>
+        Our todos
+      </h1>
       <div className='App__header'>
         <div className="App__buttons">
           <button onClick={() => setCompleted(true)}>All done</button>

@@ -61,7 +61,12 @@
     }
   }
   &__buttons {
-    & button {
+    & > button {
+      font-size: 18px;
+      .bx {
+        color: yellow;
+        font-size: 20px;
+      }
       &:nth-child(1) {
         background-color: green;
       }
