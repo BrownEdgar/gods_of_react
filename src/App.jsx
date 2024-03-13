@@ -5,7 +5,6 @@ import './App.css'
 function App() {
   const [users, setusers] = useState(data)
 
-
   const handleChange = () => {
     setusers((prevUsers) => {
       return prevUsers.map(elem => {
