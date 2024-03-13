@@ -1,0 +1,17 @@
+.App {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90%;
+    justify-content: space-between;
+    row-gap: 15px;
+  }
+  .App div {
+    border: 1px solid green;
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+    background-color: blueviolet;
+    color: aqua;
+    height: 200px;
+  }
+  
