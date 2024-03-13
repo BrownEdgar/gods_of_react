@@ -1,0 +1,46 @@
+.App{
+    max-width: 700px;
+    margin: auto;
+    background-color: rgba(216, 242, 234, 0.846);
+    padding: 50px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    & > h1{
+        color: rgb(86, 86, 86);
+        line-height: 50%;
+        font-weight: bold;
+    }
+    & > p{
+        color: rgba(86, 86, 86, 0.881);
+        line-height: 50%;
+        padding-bottom: 25px;
+    }
+    &__btns{
+        display: flex;
+        gap: 10px;
+        & > .btn{
+            width: 250px;
+            height: 50px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            & > p {
+                color: white;
+                font-size: 15px;
+            }
+            & > i {
+                font-size: 20px;
+                color: white;
+            }
+        }
+        & > .fb{
+            background-color: royalblue;
+        }
+        & > .google{
+            background-color: rgb(201, 67, 67);
+        }
+    }
+}
+

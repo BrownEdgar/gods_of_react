@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './Homeworks/Movies/App.jsx'
+import App from './Homeworks/CreateAccount/App.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
