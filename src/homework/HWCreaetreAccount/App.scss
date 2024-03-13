@@ -1,0 +1,47 @@
+.App {
+  width: 90%;
+  margin: 100px auto;
+  background-color: rgb(201, 226, 226);
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__hed {
+    font-family: "Segoe UI";
+    font-size: 50px;
+    color: rgb(27, 23, 145);
+  }
+  &__info {
+    font-family: Arial;
+    font-size: 20px;
+    color: rgba(87, 104, 104, 0.678);
+  }
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 5px;
+    justify-content: flex-start;
+  }
+  &__butn {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    padding: 10px 35px;
+    border-radius: 30px;
+    color: rgb(247, 248, 249);
+  }
+  &__fb {
+    background-color: rgb(50, 50, 174);
+    &:hover {
+      content: attr ("bx bxl-facebook bx-fade-down");
+    }
+  }
+  &__g {
+    background-color: rgb(203, 44, 44);
+  }
+}
