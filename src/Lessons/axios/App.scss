@@ -1,0 +1,15 @@
+.Posts{
+    width: 1200px;
+    margin: 50px auto;
+    padding: 1em;
+    &__item{
+        display: inline-block;
+        background-color: rgb(148, 93, 200);
+        padding: 1em;
+        border-radius: 12px;
+        margin: 20px;
+        width: calc(50% - 40px);
+        vertical-align: top;
+    }
+
+}
