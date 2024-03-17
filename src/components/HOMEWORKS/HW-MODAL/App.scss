@@ -1,0 +1,44 @@
+.App {
+  display: flex;
+  max-width: 1200px;
+  padding: 16px;
+  flex-wrap: wrap;
+  align-content: start;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 auto;
+  &__item {
+    position: relative;
+    width: 80%;
+    background-color: lightgray;
+    border-radius: 20px;
+    padding: 1em;
+    min-height: 100px;
+    h2 {
+      color: rgb(54, 54, 54);
+    }
+    p{
+      margin-top: 5px;
+      color: rgb(86, 86, 86);
+    }
+    button {
+      position: absolute;
+      top: 0;
+      right: -30px;
+      background-color: red;
+      color: white;
+      height: 100%;
+      width: 50px;
+      border-radius: 0 20px 20px 0;
+      margin: 0;
+      font-size: 17px;
+    }
+  }
+  &__title {
+    flex-basis: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    margin: 40px 0;
+  }
+}
