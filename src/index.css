@@ -12,6 +12,7 @@
 body {
   max-width: 1440px;
   margin: 0 auto;
+  background-color: #1d1d1d;
 }
 
 a {
@@ -28,4 +29,6 @@ button {
   cursor: pointer;
   padding: 0.6rem 1rem;
   margin: 10px;
+  border: 1px solid #000;
+
 }

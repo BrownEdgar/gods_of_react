@@ -1,0 +1,28 @@
+.App {
+  display: flex;
+  max-width: 1200px;
+  padding: 16px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 16px;
+  align-content: start;
+  margin: 0 auto;
+  &__item {
+    width: 32%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 1em;
+    button {
+      background-color: #ff0707;
+      color: #fff;
+    }
+  }
+  &__title {
+    flex-basis: 100%;
+    width: 100%;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 60px;
+  }
+}
