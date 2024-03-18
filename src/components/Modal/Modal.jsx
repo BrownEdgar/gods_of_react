@@ -5,7 +5,6 @@ import './Modal.scss'
 
 export default function Modal({ children, theme, toggleModal, isOpen }) {
 
-
   useEffect(() => {
     const handleClick = (e) => {
       const { className } = e.target;
