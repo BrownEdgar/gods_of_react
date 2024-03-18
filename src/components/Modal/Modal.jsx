@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import './Modal.scss'
 
-export default function Modal({ children, theme, toggleModal, isOpen }) {
+export default function Modal({ children, theme, toggleModal, isOpen, size, position }) {
 
   useEffect(() => {
     const handleClick = (e) => {
@@ -27,8 +27,11 @@ export default function Modal({ children, theme, toggleModal, isOpen }) {
   return (
     <div className='Modal'>
       <div className={classNames("Modal__content", {
-        [`Modal__content-${theme}`]: true
-      })}>
+        [`Modal__content-${theme}`]: true,
+        [`Modal__content-${size}`]: true
+      })}
+        style={{ alignSelf: position }}
+      >
         {children}
       </div>
     </div>
@@ -36,10 +39,13 @@ export default function Modal({ children, theme, toggleModal, isOpen }) {
 }
 
 Modal.defaultProps = {
-  theme: 'light'
+  theme: 'light',
+  position: 'end',
 }
 
 Modal.propTypes = {
+  position: PropTypes.oneOf(['start', 'center', "end"]),
+  size: PropTypes.oneOf(['sm', 'md', "lg"]),
   isOpen: PropTypes.bool.isRequired,
   toggleModal: PropTypes.func.isRequired,
   theme: PropTypes.oneOf(['dark', 'light']),
@@ -47,12 +53,4 @@ Modal.propTypes = {
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.node)
   ]),
-  posts: PropTypes.arrayOf(
-    PropTypes.exact({
-      id: PropTypes.number.isRequired,
-      userId: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-    })
-  )
 }
