@@ -35,8 +35,7 @@
         font-size: 20px;
        
       }
-
-      i:hover {
+      &:hover > i{
         animation: identifier 1s infinite;
         @keyframes identifier {
           0% {
@@ -48,20 +47,12 @@
           }
         }
       }
+
+      
       
     }
-    &-leftHover:hover {
-        animation: identifier 1s infinite;
-        @keyframes identifier {
-          0% {
-            transform: rotateX(0deg);
-          }
-
-          100% {
-            transform: rotateX(360deg);
-          }
-        }
-      }
+    
+    
      
 
     &-right {
@@ -81,8 +72,7 @@
         margin-right: 10px;
         font-size: 20px;
       }
-
-      i:hover {
+      &:hover > i{
         animation: identifier 1s infinite;
         @keyframes identifier {
           0% {
@@ -94,8 +84,11 @@
           }
         }
       }
+      
     }
+    
   }
+  
 
   &__content {
     display: flex;
