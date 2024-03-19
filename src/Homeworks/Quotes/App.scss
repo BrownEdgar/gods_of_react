@@ -1,0 +1,51 @@
+.App{
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    & > h1{
+        font-size: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+        font-weight: 900;
+        padding-top: 20px;
+        color: #26346e;
+    }
+    &__quotes{
+        display: flex;
+        flex-wrap: wrap;
+        //justify-content: space-evenly;
+        gap: 50px;
+
+    }
+    &__quote{
+        background-color: rgba(255, 255, 255, 0.25);
+        width: 800px;
+        height: 200px;
+        margin-bottom: 50px;
+        margin: auto;
+        border: 1px solid white;
+        border-radius: 25px;
+        display: flex;
+        padding: 30px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        & > .quote{
+            font-size: 17px;
+        }
+        & > .author{
+            font-size: 15px;
+            font-weight: bold;
+            color: #26346e;
+        }
+        & > button{
+            padding: 10px 25px;
+            background-color: #26346e;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    }
+
+}

@@ -36,3 +36,15 @@ button {
   cursor: pointer;
   padding: 0.6rem 1rem;
 } */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Esteban", serif;
+  font-weight: 400;
+  font-style: normal;
+}

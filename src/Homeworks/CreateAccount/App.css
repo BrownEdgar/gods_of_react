@@ -1,0 +1,45 @@
+.App {
+  max-width: 700px;
+  margin: auto;
+  background-color: rgba(216, 242, 234, 0.846);
+  padding: 50px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.App > h1 {
+  color: rgb(86, 86, 86);
+  line-height: 50%;
+  font-weight: bold;
+}
+.App > p {
+  color: rgba(86, 86, 86, 0.881);
+  line-height: 50%;
+  padding-bottom: 25px;
+}
+.App__btns {
+  display: flex;
+  gap: 10px;
+}
+.App__btns > .btn {
+  width: 250px;
+  height: 50px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.App__btns > .btn > p {
+  color: white;
+  font-size: 15px;
+}
+.App__btns > .btn > i {
+  font-size: 20px;
+  color: white;
+}
+.App__btns > .fb {
+  background-color: royalblue;
+}
+.App__btns > .google {
+  background-color: rgb(201, 67, 67);
+}/*# sourceMappingURL=App.css.map */
