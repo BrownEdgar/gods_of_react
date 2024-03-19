@@ -5,7 +5,7 @@ import './Modal.scss'
 
 
 
-export default function Modal({children, theme, toogleModal, isOpen}) {
+export default function Modal({children, theme, toogleModal, isOpen, size, position}) {
   useEffect(() => {
     const handleClick=(e)=>{
       const {className} = e.target;
@@ -28,7 +28,13 @@ export default function Modal({children, theme, toogleModal, isOpen}) {
   
   return (
     <div className="Modal">
-        <div className={classNames('Modal__content', {[`Modal__content-${theme}`] : true})}>
+        <div className={classNames('Modal__content', 
+        {[`Modal__content-${theme}`] : true,
+        [`Modal__content-${size}`]:true
+        })}
+        style={{ alignSelf: position }}
+        >
+          
             {children}
         </div>
     </div>
@@ -38,16 +44,19 @@ export default function Modal({children, theme, toogleModal, isOpen}) {
 
 
 Modal.defaultProps={
-  theme: 'light'
+  theme: 'light',
+  position: 'end',
 }
 
 Modal.propTypes={
+position: PropTypes.oneOf(['start', 'center', 'end']),
+size: PropTypes.oneOf(['sm', 'md', 'lg']),
 isOpen: PropTypes.bool.isRequired,
 toogleModal: PropTypes.func.isRequired,
-theme: PropTypes.oneOf(['dark', 'light'])
-//children: PropTypes.oneOfType([
-//  PropTypes.element,
-//  PropTypes.arrayOf(PropTypes.node)
-//])
+theme: PropTypes.oneOf(['dark', 'light', 'pink']),
+children: PropTypes.oneOfType([
+ PropTypes.element,
+ PropTypes.arrayOf(PropTypes.node)
+])
 
 }
