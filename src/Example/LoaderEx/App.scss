@@ -1,0 +1,14 @@
+.App {
+  margin: 150px auto;
+  border: 2px solid gray;
+  padding: 1em;
+  text-align: center;
+  border-radius: 12px;
+  position: relative;
+  background-image: linear-gradient(to top right, #0d9488, #042f2e);
+  color: #fff;
+
+  &-blur {
+    filter: blur(4px);
+  }
+}

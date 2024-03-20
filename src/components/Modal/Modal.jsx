@@ -3,7 +3,7 @@ import './Modal.scss'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
-export default function Modal({children, theme, toggleModal, isOpen}) {
+export default function Modal({children, theme, toggleModal, isOpen, size}) {
 
   useEffect(() => {
     const handleClick = (e) => {
@@ -21,8 +21,10 @@ return () => {
   return (
     <div className='Modal'>
       <div className={classNames('Modal__content',{
-        [`Modal__content-${theme}`] : true
+        [`Modal__content-${theme}`] : true,
+        [`Modal__content-${size}`] : true
       })}>
+        
       {children}
       </div>
     </div>
