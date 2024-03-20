@@ -2,7 +2,7 @@ import React, { Children, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import './Modal.scss'
 
-export default function Modal({ children, toggleModal }) {
+export default function Modal({ children, toggleModal, isOpen }) {
 
   useEffect(() => {
     const handleclick = (e) => {
@@ -17,9 +17,11 @@ export default function Modal({ children, toggleModal }) {
       window.removeEventListener('click', handleclick)
 
     }
-  }, [])
+  }, [isOpen])
 
-
+  if (!isOpen) {
+    return null;
+  }
   return (
     <div className='Modal'>
       <div className='Modal__content'>
