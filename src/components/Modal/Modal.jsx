@@ -18,7 +18,7 @@ export default function Modal({ children, theme, toggleModal, isOpen, size, posi
     return () => {
       window.removeEventListener('click', handleClick)
     }
-  }, [])
+  }, [isOpen])
 
   if (!isOpen) {
     return null;
@@ -39,7 +39,7 @@ export default function Modal({ children, theme, toggleModal, isOpen, size, posi
 }
 
 Modal.defaultProps = {
-  theme: 'light',
+  theme: 'dark',
   position: 'end',
 }
 
