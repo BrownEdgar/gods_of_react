@@ -1,5 +1,6 @@
 .Modal {
   z-index: 999;
+  padding: 1em;
   position: fixed;
   inset: 0 0 0 0;
   width: 100%;
@@ -9,18 +10,36 @@
   place-items: center;
   &__content{
     font-size: 13px;
-    background-color: whitesmoke;
+    background-color: rgb(230, 88, 82);
+    color: #fff;
     border-radius: 12px;
-    padding: 1em;
+    padding: 1em 4em;
     text-align: center;
-    width: max(450px, 30%);
-    min-height: 250px;
+    align-self: end;
+    width: 90%;
+    min-height: 130px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    border-top: 10px solid rgb(243, 170, 166);
+    &-sm{
+      width: max(40%, 350px);
+    }
+    &-md{
+      width: max(60%, 350px);
+    }
+    &-lg{
+      width: max(90%, 350px);
+    }
+  }
+  &__buttons{
+    margin-left: auto;
   }
   button {
-    margin-top: 40px;
-    background-color: royalblue;
+    background-color: rgb(47, 116, 144);
     border-radius: 1em;
     padding: 12px 30px;
     color: white;
+    
   }
 }
