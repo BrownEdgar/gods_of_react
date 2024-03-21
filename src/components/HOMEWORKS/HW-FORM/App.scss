@@ -1,0 +1,101 @@
+.container {
+  width: 100%;
+  background-color: rgb(33, 45, 54);
+}
+.App{
+  background-color: rgb(179, 179, 179);
+  box-shadow: -20px 0px 20px 0px black;
+  padding: 2em;
+  text-align: center;
+  width: 35%;
+  margin: 0 auto;
+  min-height: 800px;
+  h1 {
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+  p {
+    line-height: 1.6;
+    font-size: 20px;
+  }
+  a {
+    margin-bottom: 25px;
+  }
+  &__form {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    .checkbox {
+      width: 100%;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      width: 30%;
+      input {
+        width: 10px;
+      }
+    }
+    input{
+      width: 100%;
+      padding: 1em;
+      font-size: 20px;
+      border: 1px solid gray;
+      border-radius: 8px;
+      flex-grow: 4;
+      &[type='submit'] {
+        width: 300px;
+        border: 1px solid rgb(33, 45, 54);
+        cursor: pointer;
+        flex-grow: 0;
+      }
+    }
+  }
+  &__list {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+    li {
+      background-color: #eee;
+      overflow: hidden;
+      height: 45px;
+      border-radius: 10px;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      cursor: pointer;
+      transition: .3s;
+      span {
+        background-color: rgb(27, 50, 66);
+        color: white;
+        width: 10%;
+        align-self: stretch;
+        font-size: 16px;
+        padding-top: 10px;
+      }
+      &:hover {
+        background-color: rgb(203, 202, 202);
+        scale: 1.03;
+      }
+      .username {
+        display: flex;
+        gap: 5px;
+        width: 30%;
+      }
+      .email {
+        display: flex;
+        gap: 5px;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+.devider {
+  align-self: stretch;
+  width: 2px;
+  background-color: rgb(27, 50, 66);
+}
