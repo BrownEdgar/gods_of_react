@@ -37,7 +37,7 @@ export default function App() {
         <p>{elem.quote}</p>
         <button onClick={()=>{
         toogleModal()
-        setCurrentItem(elem)
+        setCurrentItem(elem.id)
         }}>X</button>
     </div>
       )

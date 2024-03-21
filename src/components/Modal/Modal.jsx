@@ -5,12 +5,12 @@ import './Modal.scss'
 
 
 
-export default function Modal({children, theme, toogleModal, isOpen, size, position}) {
+export default function Modal({children, theme, toggleModal, isOpen, size, position}) {
   useEffect(() => {
     const handleClick=(e)=>{
       const {className} = e.target;
       if(className === 'Modal'){
-        toogleModal()
+        toggleModal()
       }
       console.log('click')
 
@@ -21,7 +21,8 @@ export default function Modal({children, theme, toogleModal, isOpen, size, posit
     return () => {
       window.removeEventListener('click', handleClick)
     }
-  }, [ ])
+  }, [isOpen])
+
   if(!isOpen){
     return null;
   }
@@ -52,7 +53,7 @@ Modal.propTypes={
 position: PropTypes.oneOf(['start', 'center', 'end']),
 size: PropTypes.oneOf(['sm', 'md', 'lg']),
 isOpen: PropTypes.bool.isRequired,
-toogleModal: PropTypes.func.isRequired,
+toggleModal: PropTypes.func.isRequired,
 theme: PropTypes.oneOf(['dark', 'light', 'pink']),
 children: PropTypes.oneOfType([
  PropTypes.element,

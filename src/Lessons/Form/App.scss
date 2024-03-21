@@ -1,0 +1,98 @@
+.App{
+    padding: 2em;
+    text-align: center;
+    h1{
+        font-size: 4em;
+        margin-bottom: 40px;
+    }
+    p{
+        line-height: 1.6;
+        font-size: 20px;
+    }
+    form{
+        margin: 50px auto;
+        width: 80%;
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        input{
+            padding: 1em;
+            font-size: 20px;
+            border: 1px solid grey;
+            flex-grow: 4;
+            &[type="submit"]{
+                width: 150px;
+                background-color: green;
+                cursor: pointer;
+                color:#fff;
+                flex-grow: 0;
+            }
+        }
+    }
+ &__list{
+    padding: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    justify-items: start;
+    align-content: center;
+    height: 400px;
+    gap: 24px;
+    li{
+        position: relative;
+        background-color: #eee;
+        overflow: hidden;
+        font-size: 20px;
+        height: 70px;
+        border-radius: 12px;
+        width: calc(40% - 16px);
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        font-size: 22px;
+        cursor: pointer;
+        transition: 0.3s;
+        span{
+            background-color: royalblue;
+            color: #fff;
+            width: 12%;
+            align-self: stretch;
+            padding-top: 20px;
+        }
+        &:hover{
+            background-color: lightblue;
+            scale: 1.06;
+           
+        }
+        .language{
+            position: absolute;
+            padding: 4px 8px;
+            background-color: rgb(225, 206, 65);
+            color: black;
+            line-height: 1;
+            right: 0px;
+            top: -2px;
+            border-radius: 8px;
+        }
+    }
+ } 
+ .email{
+    text-align: right;
+    flex-grow: 1;
+    padding-right: 12px;
+ }
+ .username{
+    flex-grow: 1;
+    text-align: left;
+
+ }  
+}
+
+.devider{
+    align-self: stretch;
+    width: 2px;
+    background-color: #25e131;
+}
