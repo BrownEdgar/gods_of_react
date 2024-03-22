@@ -1,0 +1,23 @@
+form {
+  width: 600px;
+  padding: 3em;
+  border: 2px solid #1d1d1d;
+  border-radius: 20px;
+  margin: 20px auto;
+  input,
+  select {
+    width: 100%;
+    font-size: 18px;
+    padding: 1em;
+    margin-bottom: 4px;
+    &[type="color"] {
+      width: 100px;
+      padding: 10px;
+      height: 50px;
+    }
+  }
+  .error {
+    color: #ff0404;
+    height: 35px;
+  }
+}

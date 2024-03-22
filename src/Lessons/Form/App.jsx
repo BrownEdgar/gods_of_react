@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { nanoid } from 'nanoid'
 import Modal from '../../components/Modal/Modal'
 import './App.scss'
+import classNames from 'classnames'
 
 export default function App() {
   const [users, setUsers] = useState([
@@ -13,8 +14,12 @@ export default function App() {
     }
   ])
   const [isOpen, setIsOpen] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+
+
 
   const toggleModal = () => setIsOpen(!isOpen)
+  const togglePassword = () => setShowPassword(!showPassword)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -47,10 +52,13 @@ export default function App() {
       <form className='App__form' onSubmit={handleSubmit}>
         <input type="email" name='email' placeholder='email' required />
         <input type="text" name='username' placeholder='username' required />
-        <select name="language" id="language" defaultValue='react'>
-          <option value="js">js</option>
-          <option value="react">react</option>
-        </select>
+        <div className='App__form-password'>
+          <input type={`${showPassword ? "text" : "password"}`} name='password' placeholder='password' />
+          <i className={classNames("bi", {
+            'bi-eye': !showPassword,
+            'bi-eye-slash': showPassword,
+          })} onClick={togglePassword}></i>
+        </div>
         <input type="submit" value='continue' />
       </form>
       <hr />

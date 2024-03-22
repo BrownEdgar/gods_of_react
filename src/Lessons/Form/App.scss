@@ -30,6 +30,17 @@
         flex-grow: 0;
       }
     }
+    .App__form-password {
+      position: relative;
+      background-color: #ddd;
+      i {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 28px;
+        cursor: pointer;
+      }
+    }
   }
   &__list {
     padding: 30px;
