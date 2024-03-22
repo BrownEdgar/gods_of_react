@@ -1,0 +1,119 @@
+body{
+    background-color: #334048;
+}
+.App{
+    padding: 2em;
+    margin: 20px auto;
+    width: 100%;
+    &__form{
+        background-color:#c8c8c8;
+        width: 30%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    h1{
+        font-size: 2em;
+        font-weight: 500;
+        text-align: center;
+        padding-bottom: 1em;
+    }
+   p{
+    text-align: center;
+   }
+    form{
+        width: 80%;
+        background-color:#c8c8c8;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px auto;
+        gap: 18px;
+        input{
+            padding: 1em;
+            font-size: 20px;
+            border: 1px solid black;
+            border-radius: 8px;
+            flex-grow: 4;
+            &[type="submit"]{
+                width: 200px;
+                cursor: pointer;
+                margin: 0 auto;
+            }
+            &[type="checkbox"]{
+                width: 32px;
+                height: 32px;
+            }
+        }
+        label{
+            font-size: 18px;
+            font-weight:500;
+            position: relative;
+            span{
+            position: absolute;
+            margin-top: 8px;
+            margin-left: 10px;
+            }
+            
+        }
+    }
+   &__block2{
+    width: 100%;
+    background-color: aliceblue;
+   }
+    &__list{
+        margin-top: 30px;
+        padding: 30px;
+        flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        justify-items: start;
+        align-content: center;
+        height: 400px;
+        gap: 10px;
+        background-color: bisque;
+        li{
+            overflow: hidden;
+            font-size: 20px;
+            height: 70px;
+            border-radius: 12px;
+            width: calc(40% - 16px);
+            display: flex;
+            border: 1px solid black;
+            align-items: center;
+            font-size: 22px;
+            cursor: pointer;
+            span{
+                background-color: whitesmoke;
+                color: black;
+                width: 10%;
+                align-self: stretch;
+                padding:20px;
+                border-right: 1px solid black;
+            }
+        }
+     } 
+     .email{
+        text-align: right;
+        flex-grow: 1;
+        padding: 20px;
+        background-color: aliceblue;
+        height: 70px;
+     }
+     .username{
+        flex-grow: 1;
+        padding: 20px;
+        background-color: aliceblue;
+        height: 70px;
+        border-right: 1px solid black;
+     }
+     .password{
+        text-align: right;
+        flex-grow: 1;
+        padding: 20px;
+        background-color: aliceblue;
+        height: 70px;
+        border-right: 1px solid black;
+     }  
+}
