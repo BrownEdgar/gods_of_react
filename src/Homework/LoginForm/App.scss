@@ -1,0 +1,82 @@
+.App {
+  padding: 2em;
+  text-align: center;
+
+  form {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+
+    input {
+      padding: 1em;
+      font-size: 1em;
+      border: 1px solid gray;
+      border-radius: 10px;
+    }
+  }
+  &__checkbox {
+    display: flex;
+    gap: 10px;
+
+    input {
+      width: 1em;
+    }
+    p {
+      margin-top: 12px;
+    }
+  }
+  &__login {
+    input {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+    li {
+      background-color: #eee;
+      height: 70px;
+      font-size: 18px;
+      border-radius: 12px;
+      width: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      padding-left: 5em;
+      gap: 16px;
+      padding-top: 16px;
+      transition: 0.3s;
+      cursor: pointer;
+      position: relative;
+      i {
+        margin-bottom: 10px;
+        margin-left: 10px;
+      }
+
+      span {
+        background-color: rgb(168, 212, 9);
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        position: absolute;
+        left: 16px;
+        padding-top: 5px;
+      }
+      &:hover {
+        scale: 1.01;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+          rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      }
+    }
+  }
+}
