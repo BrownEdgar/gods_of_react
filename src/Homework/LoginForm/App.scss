@@ -8,7 +8,15 @@
     flex-direction: column;
     gap: 20px;
     width: 30%;
+    position: relative;
 
+    i {
+      position: absolute;
+      left: 375px;
+      font-size: 22px;
+      top: 97px;
+      cursor: pointer;
+    }
     input {
       padding: 1em;
       font-size: 1em;
