@@ -12,7 +12,7 @@ const initialValues = {
   language: []
 }
 
-const validationScheme = yup.object({
+const validationSchema = yup.object({
   username: yup.string().min(3, '3 sivolic voch pakas').max(20, '20 simvolic qich').required(),
   email: yup.string().email().required(),
   gender: yup.string().oneOf(['male', 'female']).required(),
@@ -37,7 +37,7 @@ export default function App() {
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
-        validationScheme={validationScheme}
+        validationSchema={validationSchema}
         validateOnChange
       >
         <Form>
