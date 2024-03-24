@@ -2,7 +2,7 @@
 form{
     width: 600px;
     padding: 3em;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 20px;
     margin: 20px auto;
     input, 
@@ -11,6 +11,11 @@ form{
         font-size: 18px;
         padding: 1em;
         margin-bottom: 4px;
+        &[type="color"] {
+            width: 100px;
+            padding: 10px;
+            height: 50px;
+          }
     }
     .error{
         color: #ff0404;
