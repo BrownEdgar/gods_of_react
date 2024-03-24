@@ -7,16 +7,15 @@ import { nanoid } from 'nanoid';
 const initialValues = {
   username: '',
   email: '',
-  gender: '',
-  color: '',
-  language: []
+  subject: '',
+  message: ''
 }
 
 const validationSchema = yup.object({
-  username: yup.string().min(3, '3 sivolic voch pakas').max(20, '20 simvolic qich').required(),
+  username: yup.string().required(),
   email: yup.string().email().required(),
-  gender: yup.string().oneOf(['male', 'female']).required(),
-  language: yup.array().min(2).required(),
+  subject: yup.string().required(),
+  message: yup.string().required(),
 })
 
 export default function App() {
@@ -26,7 +25,7 @@ export default function App() {
   const handleSubmit = (values) => {
     console.log(values);
     const user = {
-      id: nanoid(4),
+      id: nanoid(7),
       ...values,
     }
     setUsers([...users, user])
@@ -41,19 +40,15 @@ export default function App() {
         validateOnChange
       >
         <Form>
-          <Field type='text' name='username' />
+          <Field type='text' name='username' placeholder='Your name' />
           <ErrorMessage name='username' component='p' className="error" />
-          <Field type='email' name='email' />
+          <Field type='email' name='email' placeholder='Email' />
           <ErrorMessage name='email' component='p' className="error" />
-          <Field type='radio' name='gender' value='male' />male
-          <Field type='radio' name='gender' value='female' />female
-          <ErrorMessage name='gender' component='p' className="error" />
-          <Field type='checkbox' name='language' value='js' />js
-          <Field type='checkbox' name='language' value='react' />react
-          <Field type='checkbox' name='language' value='next' />next
-          <Field type='checkbox' name='language' value='node' />node
-          <ErrorMessage name='language' component='p' className="error" />
-          <input type="submit" />
+          <Field type='text' name='subject' placeholder='Subject' />
+          <ErrorMessage name='subject' component='p' className="error" />
+          <Field type='text' name='message' placeholder='Write your message' className='message' />
+          <ErrorMessage name='message' component='p' className="error" />
+          <input type="submit" value='Send Message' className='submit' />
         </Form>
       </Formik>
     </div>

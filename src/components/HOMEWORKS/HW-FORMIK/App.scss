@@ -1,18 +1,35 @@
 form {
   width: 600px;
+  min-height: 600px;
   padding: 3em;
-  border: 2px solid #1d1d1d;
-  border-radius: 20px;
+  background-color: white;
   margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid gray;
   input,
   select {
+    background-color: #e6e6e6;
+    border: 0;
     width: 100%;
-    font-size: 18px;
+    font-size: 15px;
     padding: 1em;
-    margin-bottom: 4px;
+  }
+  .submit {
+    background-color: black;
+    color: white;
+    width: 30%;
+  }
+  .message {
+    min-height: 200px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
   }
   .error{
     color: red;
-    height: 35px;
+    height: 5px;
+    margin-top: -20px;
   }
 }
