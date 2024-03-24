@@ -12,7 +12,6 @@ export default function App() {
       id: 1,
       username: 'Sebastian',
       email: 'sebastian@gmail.com',
-      language: "js"
     }
   ])
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +35,6 @@ export default function App() {
       id: nanoid(7),
       username: username.value,
       email: email.value.toLowerCase(),
-      language: language.value
     }
     console.log(user)
     setUsers([...users, user])
@@ -67,7 +65,6 @@ export default function App() {
       <ul className='App__list'>
         {users.map((elem, index) => {
           return <li key={elem.id}>
-            <em className='language'>{elem.language}</em>
             <span>{index + 1}</span>
             <i className="bi bi-person-fill"></i>
             <p className='username'>
