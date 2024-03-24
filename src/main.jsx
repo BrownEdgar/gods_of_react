@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './components/HOMEWORKS/HW-FORM/App'
+import App from './components/HOMEWORKS/HW-FORMIK/App'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />)
