@@ -1,0 +1,19 @@
+
+form{
+    width: 600px;
+    padding: 3em;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 20px auto;
+    input, 
+    select{
+        width: 100%;
+        font-size: 18px;
+        padding: 1em;
+        margin-bottom: 4px;
+    }
+    .error{
+        color: #ff0404;
+        height: 35px;
+    }
+}
