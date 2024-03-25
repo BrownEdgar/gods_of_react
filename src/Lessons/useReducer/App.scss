@@ -1,0 +1,21 @@
+body {
+  background-color: #1d1d1d;
+}
+.App {
+  margin: 20px auto;
+  h1 {
+    color: orangered;
+    text-align: center;
+    margin-bottom: 50px;
+    font-variant: small-caps;
+    font-size: 3em;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+    button {
+      font-size: 20px;
+    }
+  }
+}
