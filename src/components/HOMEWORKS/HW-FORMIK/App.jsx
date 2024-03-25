@@ -46,7 +46,7 @@ export default function App() {
           <ErrorMessage name='email' component='p' className="error" />
           <Field type='text' name='subject' placeholder='Subject' />
           <ErrorMessage name='subject' component='p' className="error" />
-          <Field type='text' name='message' placeholder='Write your message' className='message' />
+          <Field as='textarea' type='text' name='message' placeholder='Write your message' className='message' />
           <ErrorMessage name='message' component='p' className="error" />
           <input type="submit" value='Send Message' className='submit' />
         </Form>
