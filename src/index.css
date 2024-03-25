@@ -23,11 +23,10 @@ body {
   margin: 0 auto;
 }
 
- a {
+a {
   text-decoration: none;
 }
 
 ul {
-  list-style: none;
-} 
-
+  list-style-type: none;
+}

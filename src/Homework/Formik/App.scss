@@ -1,0 +1,31 @@
+.App {
+  margin: 50px auto;
+  width: 500px;
+  &__form {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 30px;
+
+    input {
+      height: 50px;
+      border-radius: 4px;
+      background-color: #eee;
+      border: 0;
+      padding: 12px;
+    }
+    input[input="textarea"] {
+      height: 200px;
+      padding-bottom: 150px;
+    }
+    input[type="submit"] {
+      width: 130px;
+      background-color: black;
+      color: #fff;
+    }
+  }
+  .error{
+    
+  }
+}
