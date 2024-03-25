@@ -22,13 +22,14 @@ export default function App() {
 
   const [users, setUsers] = useState([])
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (values, formik) => {
     console.log(values);
     const user = {
       id: nanoid(7),
       ...values,
     }
     setUsers([...users, user])
+    formik.resetForm()
   }
   return (
     <div className='App'>
