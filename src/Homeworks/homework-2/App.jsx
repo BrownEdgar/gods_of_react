@@ -10,10 +10,10 @@ export default function App() {
         </div>
         <div className="App__btns">
           <button className="App__btn">
-            <i class="bx bxl-facebook"></i>
+            <i class="bx bxl-facebook col"></i>
             <p>With Facebook</p>
           </button>
-          <button className="App__btn2">
+          <button className="App__btn col">
             <i class="bx bxl-google-plus"></i>
             <p> With Google</p>
           </button>

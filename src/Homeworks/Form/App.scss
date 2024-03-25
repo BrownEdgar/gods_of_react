@@ -1,0 +1,81 @@
+.App {
+  padding: 2em;
+  text-align: center;
+  h1 {
+    font-size: 4em;
+    margin-bottom: 40px;
+  }
+  p {
+    line-height: 1.6;
+    font-size: 20px;
+  }
+  form {
+    margin: 50px auto;
+    width: 80%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    input {
+      padding: 1em;
+      font-size: 20px;
+      border: 1px solid grey;
+      border-radius: 8px;
+      flex-grow: 4;
+      &[type="submit"] {
+        background-color: green;
+        color: white;
+        cursor: pointer;
+        flex-grow: 0;
+        width: 150px;
+      }
+    }
+    .App__form-password {
+      position: relative;
+      background-color: #eee;
+      i {
+        position: absolute;
+        right: 10px;
+        top: 19px;
+        font-size: 28px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__list {
+    padding: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    gap: 24px;
+    align-content: start;
+    li {
+      background-color: #eee;
+      overflow: hidden;
+      height: 70px;
+      font-size: 20px;
+      border-radius: 12px;
+      width: calc(40% - 16px);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 22px;
+      transition: 0.3s;
+      cursor: pointer;
+      span {
+        background-color: royalblue;
+        color: white;
+        width: 20%;
+        align-self: stretch;
+        padding-top: 20px;
+      }
+      &:hover {
+        background-color: rgb(183, 224, 238);
+        scale: 1.06;
+      }
+    }
+  }
+}

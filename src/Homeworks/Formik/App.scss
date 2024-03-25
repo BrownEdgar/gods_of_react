@@ -1,0 +1,47 @@
+.App {
+  width: 50%;
+  margin-left: 10px;
+  margin-top: 20px;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    &-inp {
+      padding: 10px;
+      background-color: rgb(205, 203, 203);
+      border: none;
+      border-radius: 4px;
+    }
+    textarea {
+      padding: 10px;
+      background-color: rgb(205, 203, 203);
+    }
+  }
+  button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    width: 30%;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  ul {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .check {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: royalblue;
+    padding: 15px;
+
+    li {
+      display: flex;
+      column-gap: 5px;
+    }
+  }
+}
