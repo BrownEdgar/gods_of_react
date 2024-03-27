@@ -1,0 +1,21 @@
+body {
+  background-color: #eee;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  min-height: 100vh;
+  gap: 10px;
+  &__contaoner {
+    height: 100%;
+  }
+  &__blogs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+    padding: 10px;
+    align-content: center;
+    height: 100%;
+  }
+}
