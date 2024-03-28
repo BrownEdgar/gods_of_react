@@ -24,3 +24,13 @@ button {
   cursor: pointer;
   padding: 0.6rem 1rem;
 }
+pre{
+  background-color: #1d1d1d;
+  padding: 1em;
+  width: 600px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  color: #fff;
+  margin: 50px auto;
+  font-size: 20px;
+}
