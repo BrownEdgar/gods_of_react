@@ -40,7 +40,7 @@ export default function App() {
             <div key={elem.id}>
               <hr />
               {elem.title}
-              <button onClick={deleteByIndex}>X</button>
+              <button onClick={()=> deleteByIndex(elem.id)}>X</button>
             </div>
           );
         })}
