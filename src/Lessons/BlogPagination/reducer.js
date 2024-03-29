@@ -77,9 +77,16 @@ export const initialState = {
 
 }
 
-function reducer(state, action) {
-  switch (action.type) {
-
+function reducer(state, { type, payload }) {
+  switch (type) {
+    case 'set-page': return {
+      ...state,
+      page: payload
+    }
+    case 'add-blog': return {
+      ...state,
+      data: [...state.data, payload]
+    }
 
     default: return state;
 

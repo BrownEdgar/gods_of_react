@@ -1,0 +1,17 @@
+.MainForm {
+  position: relative;
+  background-color: #e2e2e2;
+  form {
+    position: sticky;
+    top: 10px;
+    padding: 10px;
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 1em;
+      margin-bottom: 12px;
+      resize: none;
+    }
+  }
+}

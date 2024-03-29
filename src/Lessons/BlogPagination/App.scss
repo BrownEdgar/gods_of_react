@@ -5,10 +5,13 @@ body {
 .App {
   display: grid;
   grid-template-columns: 350px 1fr;
-  min-height: 100vh;
+
   gap: 10px;
-  &__contaoner {
-    height: 100%;
+  position: relative;
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 100px;
   }
   &__blogs {
     display: flex;
@@ -17,5 +20,36 @@ body {
     padding: 10px;
     align-content: center;
     height: 100%;
+  }
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 12px;
+
+    li {
+      padding: 4px;
+      background-color: #fff;
+      height: 40px;
+      border-radius: 8px;
+      font-size: 22px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        background-color: #10ac84;
+        color: #fff;
+      }
+      &.selected {
+        background-color: #d67b12;
+      }
+      a {
+        padding: 12px;
+      }
+      &.disabled {
+        background-color: grey;
+        cursor: no-drop;
+      }
+    }
   }
 }
