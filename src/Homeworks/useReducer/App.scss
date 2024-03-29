@@ -1,0 +1,37 @@
+.App {
+  margin: 50px auto;
+  font-size: 22px;
+  pre {
+    margin: 50px auto;
+    background-color: black;
+    padding: 1em;
+    width: 800px;
+    color: #fff;
+    border-radius: 12px;
+    white-space: pre-line;
+  }
+  input{
+    border-radius: 10px;
+    padding: 8px;
+  }
+  input[type="submit"] {
+    background-color: rosybrown;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+
+    button {
+      background-color: rosybrown;
+      border-radius: 4px;
+      padding: 8px;
+      border: 0;
+      font-size: 20px;
+      margin-top: 50px;
+    }
+    button:active {
+      scale: 1.1;
+    }
+  }
+}
