@@ -1,8 +1,8 @@
 import React from 'react'
 import './MainForm.scss'
 import { Field, Formik, Form } from 'formik'
-import { nanoid } from 'nanoid'
-
+import { customAlphabet } from 'nanoid'
+const nanoid = customAlphabet("0123456789abc-", 6)
 const initialValues = {
   title: '',
   desc: '',
@@ -14,7 +14,7 @@ export default function MainForm({ addBlog }) {
   const handleSubmit = (values, { resetForm }) => {
     console.log(values)
     const blog = {
-      id: nanoid(5),
+      id: nanoid(),
       title: values.title,
       desc: values.desc,
       avatar: `./images/${values.file}`,
