@@ -1,8 +1,14 @@
+body {
+  background-color: #dbdada;
+}
 .App {
   display: grid;
   grid-template-columns: 350px 1fr;
   min-height: 100vh;
-  gap: 10px;
+  gap: 40px 20px;
+  &__container {
+    height: 100%;
+  }
   &__blogs {
     display: flex;
     flex-wrap: wrap;
@@ -10,6 +16,34 @@
     padding: 10px;
     align-content: center;
     height: 100%;
+  }
+  .pagination {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+  li {
+    padding: 4px;
+    background-color: #fff;
+    width: auto;
+    height: 40px;
+    font-size: 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: teal;
+    }
+    &.selected {
+      background-color: teal;
+    }
+    a{
+      padding: 12px;
+    }
     
   }
 }

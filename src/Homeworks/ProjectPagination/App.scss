@@ -1,0 +1,41 @@
+body {
+  background-color: #eee;
+}
+.App {
+  margin: 50px;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+  }
+  .pagination {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    color: rgb(12, 12, 12);
+  }
+  li {
+    padding: 4px;
+    background-color: #c6cde693;
+    width: auto;
+    height: 40px;
+    font-size: 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #81818d;
+    }
+    &.selected {
+      background-color: #81818d;
+    }
+    a {
+      padding: 12px;
+    }
+  }
+}

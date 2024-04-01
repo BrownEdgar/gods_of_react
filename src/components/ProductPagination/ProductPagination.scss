@@ -1,0 +1,23 @@
+.ProductPagination {
+  text-align: center;
+  
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    li {
+      width: 40px;
+      height: 40px;
+      background-color: #6e6d6d;
+      padding: 4px;
+      margin-top: 50px;
+      border-radius: 8px;
+      font-size: 22px;
+      color: #fff;
+      transition: 0.2s;
+      cursor: pointer;
+      
+    }
+  }
+}

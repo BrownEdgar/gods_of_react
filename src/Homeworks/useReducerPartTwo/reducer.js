@@ -64,13 +64,7 @@ const sort = (state) => {
 const move = (state) => {
   return {
     ...state,
-    numbers: state.arr.reduce((acc, cv) => {
-      if (typeof cv === "string") {
-        state.numbers.push(cv);
-      } else {
-        acc.push(cv);
-      }
-      return acc;
-    }, []),
+    numbers: state.arr.filter(elem => typeof elem === 'number'),
+    arr: state.arr.filter(elem => typeof elem !== 'number')
   };
 };

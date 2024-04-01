@@ -1,0 +1,30 @@
+.Products {
+  flex-basis: 45%;
+  box-shadow: 0 0 3px 0 rgba(12, 75, 122, 0.5);
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+  & > img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    height: 300px;
+    border-radius: 12px;
+  }
+  h2 {
+    margin-top: 10px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+   
+  }
+  h4 {
+    display: flex;
+    align-content: center;
+    gap: 12px;
+  }
+}
