@@ -11,9 +11,9 @@ export default function Blog({ blog }) {
         <div className="Blog__footer">
           <img src={blog.avatar} className='Blog__avatar' />
           <p>
-            {blog.date}
+            {blog.price}
           </p>
-          <a href="!#">Read post</a>
+          <a href="!#">View more</a>
         </div>
       </div>
     </div>
