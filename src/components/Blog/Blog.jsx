@@ -12,6 +12,7 @@ export default function Blog({blog}) {
           <img src={blog.avatar} alt="avatar"  className='Blog__avatar'/>
           <p>{blog.date}</p>
           <a href="!#">Read post</a>
+        
         </div>
       </div>
     </div>

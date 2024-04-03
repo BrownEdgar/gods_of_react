@@ -1,6 +1,6 @@
 .ProductPagination {
   text-align: center;
-  
+
   ul {
     display: flex;
     justify-content: center;
@@ -9,7 +9,7 @@
     li {
       width: 40px;
       height: 40px;
-      background-color: #6e6d6d;
+      background-color: #ce3939;
       padding: 4px;
       margin-top: 50px;
       border-radius: 8px;
@@ -17,7 +17,6 @@
       color: #fff;
       transition: 0.2s;
       cursor: pointer;
-      
     }
   }
 }

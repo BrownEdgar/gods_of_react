@@ -12,6 +12,7 @@ body {
   &__blogs {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1em;
     padding: 10px;
     align-content: center;

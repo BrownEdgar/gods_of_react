@@ -8,13 +8,17 @@ import ReactPaginate from 'react-paginate';
 export default function App() {
   const [{ data, page, perPage }, dispatch] = useReducer(reducer, initialState);
   const currentSlice = data.slice((page - 1) * perPage, page * perPage);
+
   const changePage = ({selected}) => {
     dispatch({ type: "set-page", payload: selected + 1 });
   };
+
   const addBlog = (blog) => {
     dispatch({ type: "add-blog", payload: blog });
   };
+
   const total = Math.ceil(data.length / perPage);
+
   return (
     <div className="App">
       <MainForm  addBlog={addBlog}/>
@@ -29,7 +33,7 @@ export default function App() {
         breakLabel="..."
         nextLabel={<i className='bx bx-caret-right'></i>}
         onPageChange={changePage}
-        pageRangeDisplayed={2}
+        pageRangeDisplayed={3}
         pageCount={total}
         previousLabel={<i className='bx bx-caret-left'></i>}
         renderOnZeroPageCount={null}

@@ -238,7 +238,8 @@ export const initialState = {
           }
     ],
     page: 1,
-    perPage: 4
+    perPage: 4,
+    editableProductId: null
 
 }
 
@@ -248,10 +249,37 @@ export default function reducer(state, action){
             ...state,
             page:  action.payload
         }
+        case 'add-product': return{
+          ...state,
+          data: [...state.data, action.payload]
+        }
+        case 'delete-product': return {
+          ...state,
+          data: state.data.filter(elem => elem.id !== action.payload)
+        }
+        case "set-edit-product": return{
+          ...state,
+          editableProductId: action.payload
+        }
+        case 'update-product': return updateProduct(state, payload)
 
 
 
         default: state
+    }
+
+
+    const updateProduct = (state, payload) => {
+      const product = state.data.map(elem => {
+        if(elem.id === state.editableProductId){
+          elem = {...elem, ...payload}
+        }
+        return elem
+      })
+      return {
+        ...state,
+         data: data
+      }
     }
 }
     
