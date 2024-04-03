@@ -1,0 +1,20 @@
+body {
+  background-color: #1d1d1d;
+}
+.App {
+  margin: 20px auto;
+  h1 {
+    color: orangered;
+    font-size: 1em;
+    padding: 1em;
+    white-space: pre-wrap;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+    button {
+      font-size: 20px;
+    }
+  }
+}

@@ -75,11 +75,16 @@ export const initialState = {
   ],
   loading: false,
   page: 1,
-  perPage: 4,
+  perPage: 2,
 }
 
 function reducer(state, action) {
   switch (action.type) {
+
+    case 'set-page': return {
+      ...state,
+      page: action.payload
+    }
 
     default: return state;
 
