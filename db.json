@@ -17,14 +17,6 @@
       "date": "May 19, 2023"
     },
     {
-      "id": "3",
-      "poster": "./images/newcard3.png",
-      "title": "Whats the difference between Gatsby and Next.js ",
-      "desc": "In this post, we will break down the differences between Gatsby and Next.JS and which approach is appropriate for a particular use case.",
-      "avatar": "./images/newgirl.jpg",
-      "date": "Jan 3, 2023"
-    },
-    {
       "id": "4",
       "poster": "./images/card4.png",
       "title": "What is Digital Customer Experience?",
