@@ -1,0 +1,29 @@
+header {
+  background-color: rgb(60, 60, 60);
+  height: 80px;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  nav {
+    width: 40%;
+    height: 100%;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 30px;
+      color: white;
+      height: 100%;
+      li {
+        font-size: 17px;
+        a {
+          &.active {
+            color: orangered;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

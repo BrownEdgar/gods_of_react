@@ -1,35 +1,22 @@
-import { useState } from 'react'
-import data from './data.json'
+import React from 'react'
 import './App.css'
+import Navbar from './components/Navbar/Navbar'
+import { Home, About, Blog, Contact, ErrorPage, Gallery } from './pages'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import ROUTES from './routes'
 
-function App() {
-  const [users, setusers] = useState(data)
-
-
-  const handleChange = () => {
-    setusers((prevUsers) => {
-      return prevUsers.map(elem => {
-        if (elem.name == "Jhon") {
-          elem.name = 'Karen'
-        }
-        return elem;
-      })
-    })
-  }
-
+export default function App() {
   return (
     <div className='App'>
-      <h1>Ract + VITE</h1>
-      {
-        users.map(elem => {
-          return <h2 key={elem.id}>{elem.name}</h2>
-        })
-      }
-      <button onClick={handleChange}>change Jhon name</button>
+      <Navbar />
+      <Routes>
+        <Route path={ROUTES.HOME} element={<Home />} />
+        <Route path={ROUTES.ABOUT} element={<About />} />
+        <Route path={ROUTES.BLOG} element={<Blog />} />
+        <Route path={ROUTES.CONTACT} element={<Contact />} />
+        <Route path={ROUTES.GALLERY} element={<Gallery />} />
+        <Route path='*' element={<ErrorPage/>} />
+      </Routes>
     </div>
   )
 }
-
-export default App;
-
-
