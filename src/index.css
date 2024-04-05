@@ -44,3 +44,13 @@ pre {
   margin: 50px auto;
   font-size: 20px;
 }
+
+.Link {
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  margin: 10px;
+  background-color: royalblue;
+  color: #fff;
+  display: inline-block;
+}
