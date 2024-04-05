@@ -1,0 +1,30 @@
+header{
+    background-color: #2b2a2a;
+    height: 80px;
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    nav{
+        width: 40%;
+        height: 100%;
+        ul{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            color: #fff;
+            gap: 30px;
+            li{
+                font-size: 20px;
+                a{
+                    &.active {
+                        background-color: rgb(51, 65, 153);
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+    }
+}

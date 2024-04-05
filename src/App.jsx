@@ -1,24 +1,28 @@
-import { useState } from 'react'
-import About from './components/About/About';
+import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+import {Home, About, Blog, Contact, ErrorPage, Gallery} from './pages'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import ROUTES from './routes'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0);
 
-  const handleClick = () => {
-    setCount(count + 1)
-  }
 
+
+
+export default function App() {
   return (
     <div className='App'>
-      <h1>Ract + VITE</h1>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <button onClick={handleClick}>count : {count}</button>
-      <About title='first props title from App' />
+      <Navbar />
+      <Routes>
+        <Route path={ROUTES.HOME} element={<Home />} />
+        <Route path={ROUTES.ABOUT} element={<About />} />
+        <Route path={ROUTES.BLOG} element={<Blog />} />
+        <Route path={ROUTES.CONTACT} element={<Contact />} />
+        <Route path={ROUTES.GALLERY} element={<Gallery />} />
+        <Route path='*' element={<ErrorPage/>} />
+      </Routes>
+     
+
     </div>
   )
 }
-
-export default App;
-
-

@@ -1,0 +1,6 @@
+export {default as Home} from './home/Home'
+export {default as About} from './About/About'
+export {default as Blog} from './Blog/Blog'
+export {default as Contact} from './Contact/Contact'
+export {default as ErrorPage} from './ErrorPage/ErrorPage'
+export {default as Gallery} from './Gallery/Gallery'
