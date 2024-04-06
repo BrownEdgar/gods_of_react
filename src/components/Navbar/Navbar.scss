@@ -1,5 +1,5 @@
 header {
-  background-color: rgb(60, 60, 60);
+  background-color: rgb(31, 31, 33);
   height: 80px;
   padding: 1em 2em;
   display: flex;
@@ -9,14 +9,14 @@ header {
     width: 40%;
     height: 100%;
     ul {
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: end;
+      color: #fff;
       gap: 30px;
-      color: white;
-      height: 100%;
       li {
-        font-size: 17px;
+        font-size: 20px;
         a {
           &.active {
             color: orangered;
