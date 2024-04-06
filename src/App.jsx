@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
-import { Home, About, Blog, Contact, ErrorPage, Gallery } from './pages'
+import { Home, About, Blog, Contact, ErrorPage, Gallery, Post } from './pages'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import ROUTES from './routes'
 
@@ -13,9 +13,10 @@ export default function App() {
         <Route path={ROUTES.HOME} element={<Home />} />
         <Route path={ROUTES.ABOUT} element={<About />} />
         <Route path={ROUTES.BLOG} element={<Blog />} />
+        <Route path={ROUTES.POST} element={<Post />} />
         <Route path={ROUTES.CONTACT} element={<Contact />} />
         <Route path={ROUTES.GALLERY} element={<Gallery />} />
-        <Route path='*' element={<ErrorPage/>} />
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
     </div>
   )
