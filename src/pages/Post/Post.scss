@@ -1,0 +1,38 @@
+.Post {
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 40%;
+  border-radius: 20px;
+  h1 {
+    padding: 30px 50px;
+    width: 100%;
+  }
+  &__content {
+    border: 1px solid gray;
+    border-radius: 15px;
+    width:100%;
+    margin-bottom: 20px;
+    img {
+      width: 40%;
+      margin: 20px 0;
+    }
+    h2,p {
+      padding-top: 20px;
+      background-color: lightblue;
+      width: 100%;
+    }
+    .postInfo {
+      display: flex;
+      padding: 10px;
+      background-color: lightblue;
+      border-radius: 0 0 15px 15px;
+      width: 100%;
+      font-size: 20px;
+      font-weight: 700;
+      gap: 20%;
+    }
+  }
+}

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export default function Blog() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    axios('https://jsonplaceholder.typicode.com/posts', {
+    axios('https://fakestoreapi.com/products', {
       params: {
         _limit: 14
       }
@@ -21,7 +21,9 @@ export default function Blog() {
         {
           posts.map(elem => {
             return <Link key={elem.id} to={`${elem.id}`}>
-              {elem.title}
+              <pre>{elem.id}</pre>
+              <h2>{elem.title}</h2>
+              <p>{elem.description}</p>
             </Link>
           })
         }

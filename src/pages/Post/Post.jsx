@@ -12,7 +12,7 @@ export default function Post() {
 
 
   useEffect(() => {
-    axios(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    axios(`https://fakestoreapi.com/products/${id}`)
       .then(res => setPost(res.data))
       .catch(err => setHasError(true))
   }, [])
@@ -28,9 +28,14 @@ export default function Post() {
   return (
     <div className='Post'>
       <h1>Welcome to the POST N {id}</h1>
-      <div className="Post_content">
+      <div className="Post__content">
+        <img src={post.image} alt="" />
         <h2>{post.title}</h2>
-        <p>{post.body}</p>
+        <p>{post.description}</p>
+        <div className="postInfo">
+          <p>Price - {post.price} $</p>
+          <p>Count - {post.count}</p>
+        </div>
       </div>
       <Link to={ROUTES.BLOG} className='Link'>All posts</Link>
     </div>
