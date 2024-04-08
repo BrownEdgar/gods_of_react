@@ -34,7 +34,7 @@ export default function Post() {
         <p>{post.description}</p>
         <div className="postInfo">
           <p>Price - {post.price} $</p>
-          <p>Count - {post.count}</p>
+          <p>Count - {post?.rating?.count}</p>
         </div>
       </div>
       <Link to={ROUTES.BLOG} className='Link'>All posts</Link>
