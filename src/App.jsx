@@ -16,24 +16,18 @@ export default function App() {
       password: "admin"
     }
   ])
-
-
-
-
-
-
-
-
+  const [isLogin, setIsLogin] = useState(localStorage.getItem('login'))
   const navigate = useNavigate()
-  const [isLogin, setIsLogin] = useState(false)
-  const handleSubmit = (values) => {
 
+  const handleSubmit = (values) => {
     const valid = users.some(user => {
       return user.email === values.email.toLowerCase() && user.password === values.password
     })
+
     if (valid) {
       navigate('/')
       setIsLogin(true)
+      localStorage.setItem('login', true)
     } else {
       alert('invalid user')
       setIsLogin(false)

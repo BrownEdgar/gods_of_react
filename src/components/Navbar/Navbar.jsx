@@ -35,7 +35,10 @@ export default function Navbar({ isLogin, setIsLogin }) {
           <li>
             {
               isLogin
-                ? <Link to={ROUTES.HOME} className='Link' onClick={() => setIsLogin(false)}>Logout</Link>
+                ? <Link to={ROUTES.HOME} className='Link' onClick={() => {
+                  setIsLogin(false);
+                  localStorage.removeItem('login')
+                }}>Logout</Link>
                 : <Link to={ROUTES.LOGIN} className='Link'>Login</Link>
             }
 
