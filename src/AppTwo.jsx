@@ -8,6 +8,9 @@ import PrivateLayoutsTwo from "./LayoutsTwo/PrivateLayoutsTwo";
 import "./AppTwo.scss";
 import Nav from "./components/Nav/Nav";
 
+
+
+
 export default function AppTwo() {
   const [user, setUser] = useState([
     {
