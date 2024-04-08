@@ -1,0 +1,37 @@
+.Product {
+  background-color: #eee;
+  margin-bottom: 50px;
+
+  h2 {
+   padding: 50px;
+   text-align: center;
+   font-size: 30px;
+  }
+
+  &__content {
+    margin: 50px;
+    background-color: rgb(172, 165, 165);
+    width: 600px;
+    padding: 1em;
+    border-radius: 12px;
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 20px;
+    }
+    
+  }
+  a{
+    
+    background-color: rgb(160, 46, 160);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 50px;
+    font-weight: 500;
+    
+  }
+  img {
+    width: 100px;
+  }
+}

@@ -1,0 +1,27 @@
+.Products {
+  background-color: #eee;
+
+  h2 {
+    text-align: center;
+    padding: 50px;
+  }
+
+  img {
+    width: 70px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    a {
+      background-color: #c5c1c1;
+      display: inline-block;
+      padding: 10px;
+      border-radius: 12px;
+      font-size: 18px;
+      margin-bottom: 15px;
+      margin-left: 15px;
+    }
+  }
+}

@@ -20,7 +20,7 @@ export default function Blog() {
       <h2>Posts</h2>
       <div className="Posts">
         {posts.map(elem => {
-          return <Link key={elem.id}>{elem.title}</Link>
+          return <Link key={elem.id} to={`${elem.id}`}>{elem.title}</Link>
         })}
       </div>
 
