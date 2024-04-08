@@ -27,6 +27,9 @@ export default function Navbar() {
                 <li>
                     <NavLink to={ROUTES.GALLERY}>Gallery</NavLink>
                 </li>
+                <li>
+                    <NavLink to={ROUTES.PRODUCTS}>Products</NavLink>
+                </li>
             </ul>
         </nav>
     </header>

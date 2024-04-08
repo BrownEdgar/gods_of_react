@@ -3,6 +3,8 @@ const ROUTES = {
     ABOUT: '/about',
     BLOG: '/blog',
     CONTACT: '/contact',
-    GALLERY: '/gallery'
+    GALLERY: '/gallery',
+    PRODUCTS: '/products',
+    PRODUCT: '/products/:id'
 }
 export default ROUTES
