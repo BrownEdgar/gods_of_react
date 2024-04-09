@@ -7,11 +7,8 @@ import { Link } from 'react-router-dom';
 export default function Blog() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    axios('https://fakestoreapi.com/products', {
-      params: {
-        _limit: 14
-      }
-    }).then(res => setPosts(res.data))
+    axios('https://fakestoreapi.com/products')
+      .then(res => setPosts(res.data))
   }, [])
 
   return (

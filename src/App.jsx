@@ -16,8 +16,8 @@ export default function App() {
     }
   ])
 
+  const [isLogin, setIsLogin] = useState(localStorage.getItem('login'))
   const navigate = useNavigate()
-  const [isLogin, setIsLogin] = useState(false)
   const handleSubmit = (values) => {
 
     const valid = users.some(user => {
@@ -26,6 +26,7 @@ export default function App() {
     if (valid) {
       navigate('/')
       setIsLogin(true)
+      localStorage.setItem('login', true)
     } else {
       alert('invalid user')
       setIsLogin(false)
