@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './Homeworks/Quotes/App.jsx'
+import App from './Homeworks/Select/Select'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

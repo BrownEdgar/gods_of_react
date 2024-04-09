@@ -13,7 +13,7 @@ export default function App() {
     const toggleModal = () => {setIsOpen(!IsOpen)}
     const deleteByName = () => {
       const res = data.filter(elem => elem !== currItem);
-      setData(res)
+      setData(res)    
       setCurrItem('')
       toggleModal()
     }
