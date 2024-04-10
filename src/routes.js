@@ -1,10 +1,11 @@
 const ROUTES = {
     HOME: '/',
-    ABOUT: '/about',
+    ABOUT: 'about',
     BLOG: '/blog',
-    CONTACT: '/contact',
-    GALLERY: '/gallery',
+    CONTACT: 'contact',
+    GALLERY: 'gallery',
     PRODUCTS: '/products',
-    PRODUCT: '/products/:id'
+    PRODUCT: 'products/:id',
+    USERS: 'users'
 }
 export default ROUTES

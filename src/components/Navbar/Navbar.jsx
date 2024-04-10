@@ -30,6 +30,9 @@ export default function Navbar() {
                 <li>
                     <NavLink to={ROUTES.PRODUCTS}>Products</NavLink>
                 </li>
+                <li>
+                    <NavLink to={ROUTES.USERS}>Users</NavLink>
+                </li>
             </ul>
         </nav>
     </header>
