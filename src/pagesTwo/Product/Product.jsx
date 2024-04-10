@@ -18,16 +18,18 @@ export default function Product() {
 
   return (
     <div className="Product">
-      <h2>Product N{id}</h2>
-      <div className="Product__content">
-        <p>Id: {product.id}</p>
-        <p>Title: {product.title}</p>
-        <p>Price: {product.price}</p>
-        <p>Description: {product.description}</p>
-        <p>Category: {product.category}</p>
+      <div className="Product__img">
         <img src={product.image} />
+        </div>
+      <div className="Product__content">
+        <p>{product.title}</p>
+        <p>{product.price}$</p>
+        <p>{product.description}</p>
+        <p>Category: {product.category}</p>
+        <p>Rate: {product?.rating?.rate}</p>
+        <Link to={ROUTES.PRODUCTS} className="allProducts">All products</Link>
       </div>
-      <Link to={ROUTES.PRODUCTS}>All products</Link>
+     
     </div>
   );
 }

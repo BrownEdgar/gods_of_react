@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import ROUTES from "../routes";
-import { Home, Login, Product, Products } from "./pagesTwo";
+import { Home, Login, Product, Products, Users } from "./pagesTwo";
 import LayoutsTwo from "./LayoutsTwo/LayoutsTwo";
 import PrivateLayoutsTwo from "./LayoutsTwo/PrivateLayoutsTwo";
-
-import "./AppTwo.scss";
 import Nav from "./components/Nav/Nav";
 
-
+import "./AppTwo.scss";
 
 
 export default function AppTwo() {
@@ -19,7 +17,8 @@ export default function AppTwo() {
       password: "admin",
     },
   ]);
-  const [isLogin, setIsLogin] = useState(false);
+
+  const [isLogin, setIsLogin] = useState(localStorage.getItem("Login"));
   const navigate = useNavigate();
 
   const handleSubmit = (values) => {
@@ -32,8 +31,10 @@ export default function AppTwo() {
     if (valid) {
       navigate("/");
       setIsLogin(true);
+      localStorage.setItem("Login", true);
     } else {
       alert("invalid username");
+      setIsLogin(false);
     }
   };
 
@@ -46,6 +47,7 @@ export default function AppTwo() {
           <Route element={<PrivateLayoutsTwo isLogin={isLogin} />}>
             <Route path={ROUTES.PRODUCTS} element={<Products />} />
             <Route path={ROUTES.PRODUCT} element={<Product />} />
+            <Route path={ROUTES.USERS} element={<Users />} />
           </Route>
           <Route
             path={ROUTES.LOGIN}

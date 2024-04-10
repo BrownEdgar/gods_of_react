@@ -1,0 +1,28 @@
+.Users{
+    margin: 50px;
+   
+    select{
+        width: 100px;
+        margin-bottom: 50px;
+    }
+    
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 400px;
+        
+        
+
+        li{
+            width: 250px;
+            height: 50px;
+            background-color: rgb(175, 166, 166);
+            padding: 1em;
+            font-size: 14px;
+            width: 600px;
+           
+            
+        }
+    }
+}

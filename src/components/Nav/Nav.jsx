@@ -4,12 +4,12 @@ import ROUTES from "../../../routes";
 
 import "./Nav.scss";
 
-export default function Nav({isLogin, setLogin}) {
+export default function Nav({isLogin, setIsLogin}) {
   return (
     <div className="Nav">
       <div className="Nav__logo">
-        <img src="https://fakestoreapi.com/icons/logo.png" alt="fakestoreapi" />
-        <h2>Fake Store API</h2>
+        <Link to={ROUTES.HOME}><img src="https://fakestoreapi.com/icons/logo.png" alt="fakestoreapi" /></Link>
+        <Link to={ROUTES.HOME}><h1>Fake Store API</h1></Link>
       </div>
       <div className="Nav__content">
         <ul>
@@ -20,8 +20,13 @@ export default function Nav({isLogin, setLogin}) {
             <NavLink to={ROUTES.PRODUCTS}>Products</NavLink>
           </li>
           <li>
+            <NavLink to={ROUTES.USERS}>Users</NavLink>
+          </li>
+          <li>
             {isLogin ? (
-              <Link to={ROUTES.HOME} className="login" onClick={() => setLogin(false)}>
+              <Link to={ROUTES.HOME} className="login" onClick={() => {
+                setIsLogin(false)
+                localStorage.removeItem("Login")}}>
                 Logout
               </Link>
             ) : (

@@ -13,6 +13,7 @@ const ROUTES = {
     HOME: '/',
     PRODUCTS: '/products',
     PRODUCT: '/products/:id',
+    USERS: '/users',
     LOGIN: '/login'
    
 }

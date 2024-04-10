@@ -7,11 +7,7 @@ export default function Blog() {
 
   const [posts, setPosts] = useState([])
   useEffect(() => {
-    axios('https://jsonplaceholder.typicode.com/posts', {
-      params: {
-        _limit: 10
-      }
-    })
+    axios('https://jsonplaceholder.typicode.com/posts')
     .then(res => setPosts(res.data)) 
 
   }, [])

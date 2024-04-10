@@ -3,25 +3,65 @@
 
   h2 {
     text-align: center;
+    font-size: 28px;
     padding: 50px;
   }
 
-  img {
-    width: 70px;
-  }
   &__content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    gap: 30px;
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      margin: -20px;
+    }
+
     a {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
       background-color: #c5c1c1;
-      display: inline-block;
-      padding: 10px;
-      border-radius: 12px;
-      font-size: 18px;
-      margin-bottom: 15px;
-      margin-left: 15px;
+      border-radius: 10px;
+      font-size: 14px;
+
+      width: 200px;
+      height: 330px;
+      padding: 20px;
+    }
+  }
+  form {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 100px;
+    margin-right: 110px;
+    input {
+      width: 300px;
+      height: 40px;
+      border-radius: 8px;
+      border: 0;
+      padding: 1em;
+    }
+  }
+  select {
+    width: 160px;
+    height: 30px;
+    border-radius: 8px;
+    border: 0;
+    position: relative;
+    left: 1070px;
+    top: 90px;
+    padding: 3px;
+
+    option {
+      font-size: 14px;
+      position: absolute;
     }
   }
 }
