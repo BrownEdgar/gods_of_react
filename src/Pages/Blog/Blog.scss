@@ -1,0 +1,25 @@
+.Blog{
+    .posts{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 100px;
+        justify-content: space-between;
+        .post{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 50px;
+            img{
+                width: 400px;
+            }
+            h1{
+                font-size: 22px;
+                font-weight: 600;
+            }
+            p{
+                color: gray;
+                font-size: 15px;
+            }
+        }
+    }
+}

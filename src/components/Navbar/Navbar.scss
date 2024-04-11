@@ -1,0 +1,42 @@
+header{
+    background-color: rgba(43,44,54,255);
+    padding: 7px;
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo img{
+        width: 130px;
+    }
+    nav > ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        li{
+            text-decoration: none;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: rgb(227,227,226);
+                font-weight: 800;
+                font-size: 20px;
+                &.active{
+                    color: rgb(214,44,86);
+                }
+            }
+        }
+    }
+    .socialMedia{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        i{
+            color:#ffffff;
+            font-size: 32px;
+            cursor: pointer;
+        }
+    }
+}
