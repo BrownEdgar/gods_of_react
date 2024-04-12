@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import ROUTES from "../../../routes";
 
 import "./Product.scss";
-import ROUTES from "../../../routes";
+
 
 export default function Product() {
   const [product, setProduct] = useState({});

@@ -14,6 +14,8 @@ const ROUTES = {
     PRODUCTS: '/products',
     PRODUCT: '/products/:id',
     USERS: '/users',
+    NEWS: '/news',
+    SPECIAL_NEWS: '/news/:id',
     LOGIN: '/login'
    
 }
