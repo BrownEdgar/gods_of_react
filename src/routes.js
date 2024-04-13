@@ -6,6 +6,7 @@ const ROUTES = {
     GALLERY: 'gallery',
     PRODUCTS: '/products',
     PRODUCT: 'products/:id',
-    USERS: 'users'
+    USERS: 'users',
+    LOGIN: "/sign-in"
 }
 export default ROUTES

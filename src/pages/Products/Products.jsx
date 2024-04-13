@@ -24,8 +24,6 @@ export default function Products() {
                         {elem.title}
                         <img src={elem.image} alt="" />
                       
-                    
-                     
                    </Link>
                })
            }

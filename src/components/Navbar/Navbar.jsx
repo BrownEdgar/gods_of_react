@@ -4,7 +4,7 @@ import ROUTES from '../../routes'
 import './Navbar.scss'
 
 
-export default function Navbar() {
+export default function Navbar({isLogin, setIsLogin}) {
   return (
     <header>
         <div className='logo'>
@@ -15,7 +15,10 @@ export default function Navbar() {
                 <li>
                     <NavLink to={ROUTES.HOME}>Home</NavLink>
                 </li>
-                <li>
+                {
+                    isLogin ? (
+                        <>
+                        <li>
                     <NavLink to={ROUTES.ABOUT}>About</NavLink>
                 </li>
                 <li>
@@ -33,6 +36,20 @@ export default function Navbar() {
                 <li>
                     <NavLink to={ROUTES.USERS}>Users</NavLink>
                 </li>
+                        </>
+                    ) : null
+                }
+                <li>
+                 {
+                isLogin
+                 ? <Link to={ROUTES.HOME} className='Link' onClick={() => {
+                  setIsLogin(false);
+                  localStorage.removeItem('login')
+                 }}>Logout</Link>
+                : <Link to={ROUTES.LOGIN} className='Link'>Login</Link>
+                 }
+                </li>
+                
             </ul>
         </nav>
     </header>

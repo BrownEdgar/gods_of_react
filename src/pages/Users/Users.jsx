@@ -10,7 +10,7 @@ export default function Users() {
   const [currentId, setCurrentId] = useState('all')
 
   useEffect(() => {
-      axios("https://jsonplaceholder.typicode.com/users?_limit=10")
+      axios("https://fakestoreapi.com/users")
       .then(res => {
         setUsers(res.data)
         setFilteredArray(res.data)
@@ -21,7 +21,7 @@ export default function Users() {
     if(currentId === 'all'){
       setFilteredArray(users)
     }else{
-      setFilteredArray(users.filter(elem => elem.id === currentId))
+      setFilteredArray(users.filter(elem => elem.id === +currentId))
     }
   }, [currentId])
   
@@ -49,7 +49,6 @@ export default function Users() {
         <div className="Users">
             {filteredArray.map(elem =>{
                     return( <div key={elem.id}  className='Users__item'>
-                        <span>{elem.name}</span>
                         <span>{elem.username}</span>
                         <span>{elem.email}</span>
                     </div>
