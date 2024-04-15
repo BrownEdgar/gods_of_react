@@ -1,0 +1,11 @@
+export { default as Home } from "./home/Home";
+export { default as About } from "./About/About";
+export { default as Blog } from "./Blog/Blog";
+export { default as Contact } from "./Contact/Contact";
+export { default as Gallery } from "./Gallery/Gallery";
+export { default as Gall } from "./Gall/Gall";
+export { default as News } from "./News/News";
+export { default as SpecialNews } from "./specialNews/SpecialNews";
+export { default as ErrorPage } from "./ErrorPage/ErrorPage";
+export { default as Post } from "./Post/Post";
+export { default as SignIn } from "./SignIn/SignIn";

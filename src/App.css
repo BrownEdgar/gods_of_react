@@ -1,0 +1,15 @@
+.App {
+  /* min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr 80px; */
+
+  footer {
+    background-color: beige;
+    padding: 1em;
+    text-align: center;
+    border-top: 5px solid royalblue;
+    padding-top: 50px;
+    height: 80px;
+  }
+}

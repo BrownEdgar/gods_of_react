@@ -1,0 +1,22 @@
+.News {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 1em;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+  & > article {
+    padding: 1em;
+    position: relative;
+    border-radius: 12px;
+    flex: 0 0 47%;
+
+
+    img {
+      width: 420px;
+      margin: 0 auto;
+      display: inline-block;
+    }
+  }
+}

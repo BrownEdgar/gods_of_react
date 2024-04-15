@@ -1,0 +1,36 @@
+.Gall {
+  margin: auto;
+  width: 500px;
+  height: 450px;
+  border: 2px solid grey;
+  border-radius: 16px;
+  background-color: rgb(26, 63, 63);
+  h1 {
+    color: #fff;
+  }
+  h2 {
+    color: goldenrod;
+    font-size: 20px;
+    padding-bottom: 6px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: center;
+    h3 {
+      color: white;
+    }
+    p {
+      font-size: 14px;
+      color: #fff;
+      padding-bottom: 30px;
+    }
+  }
+  a {
+    padding: 1em;
+    color: #fff;
+    background-color: blueviolet;
+    border-radius: 16px;
+  }
+}

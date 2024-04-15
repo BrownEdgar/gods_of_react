@@ -1,0 +1,27 @@
+.Gallery {
+  display: flex;
+  flex-direction: column;
+
+  .Products {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 20px;
+
+    &__cont {
+      width: 250px;
+      height: 100%;
+    }
+
+    a {
+      display: inline-block;
+      background-color: tan;
+      border-radius: 16px;
+      padding: 1em;
+    }
+    h2 {
+      font-size: 16px;
+    }
+  }
+}

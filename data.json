@@ -1,0 +1,76 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "poster": "/images/ler.webp",
+      "title": "Another interesting single post",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.  Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.    ",
+      "avatar": "./images/newgirl.jpg",
+      "date": "Mar 16, 2023",
+      "btn": "Read post"
+    },
+    {
+      "id": 2,
+      "poster": "/images/blog-6.webp",
+      "title": "Post without preview",
+      "desc": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis convallis, neque ac tempor finibus, diam velit gravida eros, in laoreet nibh purus vel ex. Sed fermentum et tortor et fringilla. Integer hendrerit, enim vel tempus dapibus, mi risus dictum massa, non semper mauris lectus sit amet magna. Mauris tristique vestibulum tellus nec posuere. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In et efficitur nisl.",
+      "avatar": "./images/newgirl.jpg",
+      "date": "May 19, 2023",
+      "btn": "Read post"
+    },
+    {
+      "id": 3,
+      "poster": "/images/blog-7.webp",
+      "title": "Post with some image ",
+      "desc": "Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.      ",
+      "avatar": "./images/newgirl.jpg",
+      "date": "Jan 3, 2023",
+      "btn": "Read post"
+    },
+    {
+      "id": 4,
+      "poster": "/images/download (4).jpeg",
+      "title": "What is Digital Customer Experience?",
+      "desc": "In this post, we take a look at digital customer experience and the role that DXPs play in building engaging digital customer experiences.",
+      "avatar": "./images/newgirl.jpg",
+      "date": "July 11, 2023",
+      "btn": "Read post"
+    },
+    {
+      "id": 5,
+      "poster": "/images/download.jpeg",
+      "title": "Authentication Patterns with Next.js",
+      "desc": "We will break down the difference between server-side and client-side authentication & demo how each of these look in practice in a simple Next.j..",
+      "avatar": "./images/newgirl.jpg",
+      "date": "Sep 16, 2023",
+      "btn": "Read post"
+    },
+    {
+      "id": 6,
+      "poster": "/images/download (5).jpeg",
+      "title": "The Difference between Next.js and React?",
+      "desc": "In this post, we take a look at the difference between Next.js and React and discover the pros and cons of each approach.",
+      "avatar": "./images/newgirl.jpg",
+      "date": "Jan 29, 2023",
+      "btn": "Read post"
+    },
+    {
+      "id": 7,
+      "poster": "/images/download (6).jpeg",
+      "title": "Whats the difference between Gatsby and Next.js",
+      "desc": "In this post, we will break down the differences between Gatsby and Next.JS and which approach is appropriate for a particular use case.",
+      "avatar": "./images/newgirl.jpg",
+      "date": "Sep 6, 2023",
+      "btn": "Read post"
+    },
+    {
+      "id": 8,
+      "poster": "/images/download.png",
+      "title": "What is Digital Customer Experience?",
+      "desc": "In this post, we take a look at digital customer experience and the role that DXPs play in building engaging digital customer experiences.",
+      "avatar": "./images/newgirl.jpg",
+      "date": "Aug 6, 2023",
+      "btn": "Read post"
+    }
+  ]
+}
