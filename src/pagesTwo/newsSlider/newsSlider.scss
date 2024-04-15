@@ -1,0 +1,32 @@
+.newsSlider {
+  width: 1100px;
+  &__content {
+    width: 350px;
+    border-radius: 12px;
+    border: 1px solid black;
+    margin-top: 50px;
+  
+
+    img {
+      width: 350px;
+  
+    }
+  }
+  .slick-slider{
+    
+    margin-left: 100px;
+  }
+  .slick-prev{
+    background-color: black;
+  }
+  .slick-next {
+    background-color: black;
+   
+  }
+  .slick-list {
+    text-align: center;
+    border-radius: 12px;
+
+    
+  }
+}

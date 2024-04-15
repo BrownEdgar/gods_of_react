@@ -16,6 +16,7 @@ const ROUTES = {
     USERS: '/users',
     NEWS: '/news',
     SPECIAL_NEWS: '/news/:id',
+    SLIDER: '/slider',
     LOGIN: '/login'
    
 }

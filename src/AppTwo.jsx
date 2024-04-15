@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import ROUTES from "../routes";
-import { Home, Login, News, Product, Products, SpecialNews, Users } from "./pagesTwo";
+import { Home, Login, News, Product, Products, Slider, SpecialNews, Users } from "./pagesTwo";
 import LayoutsTwo from "./LayoutsTwo/LayoutsTwo";
 import PrivateLayoutsTwo from "./LayoutsTwo/PrivateLayoutsTwo";
 import Nav from "./components/Nav/Nav";
@@ -50,6 +50,7 @@ export default function AppTwo() {
             <Route path={ROUTES.USERS} element={<Users />} />
             <Route path={ROUTES.NEWS} element={<News />} />
             <Route path={ROUTES.SPECIAL_NEWS} element={<SpecialNews />} />
+            <Route path={ROUTES.SLIDER} element={<Slider />} />
           </Route>
           <Route
             path={ROUTES.LOGIN}

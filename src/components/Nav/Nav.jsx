@@ -26,6 +26,9 @@ export default function Nav({isLogin, setIsLogin}) {
             <NavLink to={ROUTES.NEWS}>News</NavLink>
           </li>
           <li>
+            <NavLink to={ROUTES.SLIDER}>Slider</NavLink>
+          </li>
+          <li>
             {isLogin ? (
               <Link to={ROUTES.HOME} className="login" onClick={() => {
                 setIsLogin(false)
