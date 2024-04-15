@@ -1,0 +1,9 @@
+@mixin flexRules($direction, $ai, $jc){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $ai;
+    justify-content: $jc;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 1em;
+}

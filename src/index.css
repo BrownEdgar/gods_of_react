@@ -35,3 +35,28 @@ pre{
   margin: 50px auto;
   font-size: 20px;
 }
+.slick-slider{
+  height: 480px;
+  width: 1200px;
+}
+.slick-list{
+  height: 100%;
+}
+.slick-track{
+  height: 100%;
+}
+.slick-next:before, .slick-prev:before{
+  color: #222 !important;
+}
+.slick-slide>div{
+  margin: 0 auto;
+  height: 400px;
+  padding: 10px;
+
+}
+.slick-next:before, .slick-prev:before{
+  font-size: 40px;
+  margin-left: -10px;
+
+}
+

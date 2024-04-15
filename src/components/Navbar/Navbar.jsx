@@ -36,6 +36,9 @@ export default function Navbar({isLogin, setIsLogin}) {
                 <li>
                     <NavLink to={ROUTES.USERS}>Users</NavLink>
                 </li>
+                <li>
+                    <NavLink to={ROUTES.NEWS}>News</NavLink>
+                </li>
                         </>
                     ) : null
                 }

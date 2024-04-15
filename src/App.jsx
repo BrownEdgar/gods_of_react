@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Home, About, Blog, Contact, ErrorPage, Gallery, Products, Product, Users, Signin} from './pages'
+import {Home, About, Blog, Contact, ErrorPage, Gallery, Products, Product, Users, Signin, News, SpecialNews} from './pages'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Layouts from './Layouts/Layouts'
 import PrivateLayouts from './Layouts/PrivateLayouts'
@@ -49,6 +49,8 @@ export default function App() {
           <Route path={ROUTES.PRODUCTS} element={<Products />} />
           <Route path={ROUTES.PRODUCT} element={<Product />} />
           <Route path={ROUTES.USERS} element={<Users />} />
+          <Route path={ROUTES.NEWS} element={<News />} />
+          <Route path={ROUTES.SPECIAL_NEWS} element={<SpecialNews />} />
         </Route>
         <Route path={ROUTES.LOGIN} element={<Signin handleSubmit={handleSubmit} />} />
         <Route path='*' element={<ErrorPage/>} />
