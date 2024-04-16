@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import ROUTES from "../routes";
-import { Home, Login, News, Product, Products, Slider, SpecialNews, Users } from "./pagesTwo";
+import {
+  Home,
+  Login,
+  News,
+  Product,
+  Products,
+  Slider,
+  SpecialNews,
+  Users,
+} from "./pagesTwo";
 import LayoutsTwo from "./LayoutsTwo/LayoutsTwo";
 import PrivateLayoutsTwo from "./LayoutsTwo/PrivateLayoutsTwo";
 import Nav from "./components/Nav/Nav";
 
 import "./AppTwo.scss";
-
 
 export default function AppTwo() {
   const [user, setUser] = useState([
