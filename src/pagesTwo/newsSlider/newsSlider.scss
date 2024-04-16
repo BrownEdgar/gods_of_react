@@ -1,32 +1,37 @@
-.newsSlider {
-  width: 1100px;
-  &__content {
-    width: 350px;
+.newsSlider{
+  &__content{
     border-radius: 12px;
-    border: 1px solid black;
-    margin-top: 50px;
-  
-
-    img {
-      width: 350px;
-  
+    background-color: black;
+   
+    
+    
+    img{
+      width: 300px;
+      
+    }
+    p{
+      text-align: center;
     }
   }
   .slick-slider{
+    margin: 50px auto;
+    width: 80%;
     
-    margin-left: 100px;
+   
+    
+
   }
-  .slick-prev{
-    background-color: black;
-  }
-  .slick-next {
-    background-color: black;
+  .slick-list{
+    height: 300px;
    
   }
-  .slick-list {
-    text-align: center;
+  .slick-track{
+    height: 100%;
+    margin-left: 16px;
+    padding: 1em;
     border-radius: 12px;
-
+    
+    
     
   }
 }
