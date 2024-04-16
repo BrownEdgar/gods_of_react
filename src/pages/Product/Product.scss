@@ -1,0 +1,31 @@
+.Product{
+    margin-top: 30px;
+    h1{
+        text-align: center;
+    }
+    .Link{
+        margin: 20px;
+        border-radius: 4px;
+        padding: 0.6rem 1rem;
+        cursor: pointer;
+        color: #fff;
+        background-color: rgb(17, 58, 17);
+        
+    }
+    .Product__container{
+        margin: 20px;
+        text-align: center;
+        line-height: 1.5;
+        background-color: rgb(199, 90, 108);
+        padding: 20px;
+        border-radius: 4px;
+        img{
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+        }
+        p, span{
+            font-size: 20px;
+        }
+    }
+}

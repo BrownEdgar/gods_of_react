@@ -1,0 +1,18 @@
+@mixin bgRuls(){
+    background-image: url('https://images.unsplash.com/photo-1518770352423-dce09a3d3307?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Home{
+    height: calc(100vh - 160px);
+    &__container{
+        height: 100%;
+        @include bgRuls();
+        h1{
+            text-align: center;
+            padding-top: 20px;
+        }
+    }
+}

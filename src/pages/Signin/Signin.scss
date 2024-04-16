@@ -1,0 +1,17 @@
+.SignIn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form{
+        text-align: left;
+        padding: 1em;
+        width: 450px;
+        input{
+            width: 100%;
+            padding: 1em;
+            border-radius: 6px;
+            margin-bottom: 10px;
+
+        }
+    }
+}

@@ -1,65 +1,64 @@
 {
-    "news":[
-        {
-            "id": 1,
-            "image": "/news/autumn1.jpg",
-            "title": "Satisfaction Lies In The Effort",
-            "date": "April/12/2021"
-        },
-        {
-            "id": 2,
-            "image": "/news/autumn2.jpg",
-            "title": "This Is A Text Post",
-            "date": "May/19/2023"
-        },
-        {
-            "id": 3,
-            "image": "/news/autumn3.jpg",
-            "title": "Imagination Encircles The World",
-            "date": "May/15/2019"
-        },
-        {
-            "id": 4,
-            "image": "/news/autumn4.jpg",
-            "title": "Post With Some Text And Image",
-            "date": "July/11/2023"
-        },
-        {
-            "id": 5,
-            "image": "/news/autumn5.jpg",
-            "title": "Enjoy The Weather",
-            "date": "September/22/2023"
-        },
-        {
-            "id": 6,
-            "image": "/news/autumn6.jpg",
-            "title": "Interesting Inventions",
-            "date": "March/16/2023"
-        },
-        {
-            "id": 7,
-            "image": "/news/autumn7.jpg",
-            "title": "Beautiful Scapes",
-            "date": "Octomber/23/2022"
-        },
-        {
-            "id": 8,
-            "image": "/news/autumn8.jpg",
-            "title": "Photography Is The Science",
-            "date": "November/10/2023"
-        },
-        {
-            "id": 9,
-            "image": "/news/autumn9.jpg",
-            "title": "Post With Few Ideas",
-            "date": "January/28/2023"
-        },
-        {
-            "id": 10,
-            "image": "/news/autumn10.jpg",
-            "title": "Post With Some Image",
-            "date": "December/25/2021"
-        }
-
-    ]
+  "news": [
+    {
+      "id": 1,
+      "image": "/news/autumn1.jpg",
+      "title": "Satisfaction Lies In The Effort",
+      "date": "April/12/2021"
+    },
+    {
+      "id": 2,
+      "image": "/news/autumn2.jpg",
+      "title": "This Is A Text Post",
+      "date": "May/19/2023"
+    },
+    {
+      "id": 3,
+      "image": "/news/autumn3.jpg",
+      "title": "Imagination Encircles The World",
+      "date": "May/15/2019"
+    },
+    {
+      "id": 4,
+      "image": "/news/autumn4.jpg",
+      "title": "Post With Some Text And Image",
+      "date": "July/11/2023"
+    },
+    {
+      "id": 5,
+      "image": "/news/autumn5.jpg",
+      "title": "Enjoy The Weather",
+      "date": "September/22/2023"
+    },
+    {
+      "id": 6,
+      "image": "/news/autumn6.jpg",
+      "title": "Interesting Inventions",
+      "date": "March/16/2023"
+    },
+    {
+      "id": 7,
+      "image": "/news/autumn7.jpg",
+      "title": "Beautiful Scapes",
+      "date": "Octomber/23/2022"
+    },
+    {
+      "id": 8,
+      "image": "/news/autumn8.jpg",
+      "title": "Photography Is The Science",
+      "date": "November/10/2023"
+    },
+    {
+      "id": 9,
+      "image": "/news/autumn9.jpg",
+      "title": "Post With Few Ideas",
+      "date": "January/28/2023"
+    },
+    {
+      "id": 10,
+      "image": "/news/autumn10.jpg",
+      "title": "Post With Some Image",
+      "date": "December/25/2021"
+    }
+  ]
 }

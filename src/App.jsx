@@ -15,8 +15,8 @@ export default function () {
       password: "admin",
     },
   ]);
-  const [isLogin, setIsLogin] = useState(false)
-const navigate = useNavigate()
+  const [isLogin, setIsLogin] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (values) => {
     const valid = user.some((elem) => {
@@ -26,25 +26,25 @@ const navigate = useNavigate()
       );
     });
     if (valid) {
-      navigate('/')
-      setIsLogin(true)
+      navigate("/");
+      setIsLogin(true);
     } else {
       alert("invalid user");
-      setIsLogin(false)
+      setIsLogin(false);
     }
   };
 
   return (
     <div className="App">
-      <NavBar isLogin={isLogin} setIsLogin={setIsLogin}/>
+      <NavBar isLogin={isLogin} setIsLogin={setIsLogin} />
       <Routes>
         <Route path={ROUTES.HOME} element={<Layouts />}>
           <Route index element={<Home />} />
-          <Route element={<PrivateLayouts isLogin={isLogin}/>}>
-          <Route path={ROUTES.ABOUT} element={<About />} />
-          <Route path={ROUTES.BLOG} element={<Blog />} />
-          <Route path={ROUTES.CONTACT} element={<Contact />} />
-          <Route path={ROUTES.POST} element={<Post />} />
+          <Route element={<PrivateLayouts isLogin={isLogin} />}>
+            <Route path={ROUTES.ABOUT} element={<About />} />
+            <Route path={ROUTES.BLOG} element={<Blog />} />
+            <Route path={ROUTES.CONTACT} element={<Contact />} />
+            <Route path={ROUTES.POST} element={<Post />} />
           </Route>
           <Route
             path={ROUTES.SIGNIN}

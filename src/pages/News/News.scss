@@ -1,0 +1,24 @@
+@import "../../sass/mixins";
+
+.News{
+    @include flexRules(row, stretch, center);
+    article{
+       
+        position: relative;
+        border-radius: 12px;
+        border: 1px solid rgb(224, 220, 220);
+        height: 320px;
+        margin-top: 80px;
+
+        
+        img{
+            width: 100%;
+            margin: 0 auto;
+            display: inline-block;
+            object-fit: cover;
+        }
+        h2{
+            margin-bottom: 4px;
+        }
+    }
+}

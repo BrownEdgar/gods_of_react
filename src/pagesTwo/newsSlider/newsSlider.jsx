@@ -3,16 +3,17 @@ import axios from "axios";
 import Slider from "react-slick";
 
 import './newsSlider.scss'
+import moment from "moment";
 
 export default function newsSlider() {
   const [slider, setSlider] = useState([]);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 1,      
   };
 
   useEffect(() => {
@@ -27,6 +28,8 @@ export default function newsSlider() {
             <div className="newsSlider__content" key={elem.id}>
               <img src={elem.image} />
               <p>{elem.title}</p>
+              <span>{moment(elem.date).format("MMM Do YY")}</span>
+              
             </div>
           );
         })}

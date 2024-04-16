@@ -2,5 +2,5 @@ export const categories = [
   "electronics",
   "jewelery",
   "men's clothing",
-  "women's clothing"
-]
+  "women's clothing",
+];
