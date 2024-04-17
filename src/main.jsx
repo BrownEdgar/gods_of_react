@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./Homeworks/ProjectPagination/App";
+import App from "./Lessons/customHook/App";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
