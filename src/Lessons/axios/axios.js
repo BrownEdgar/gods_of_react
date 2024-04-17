@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instanse = axios.create({
-  baseURL: import.meta.env.VITE_DB_URL,
+  baseURL: 'https://jsonplaceholder.typicode.com',
   timeout: 3000,
 })
 

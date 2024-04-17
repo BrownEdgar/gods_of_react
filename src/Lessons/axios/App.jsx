@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import instanse from './axios';
 import './App.scss'
-import PostLoader from '../../components/Loaders/PostLoader';
+import PostLoader from '@/Loaders/PostLoader';
 
 
 export default function App() {
