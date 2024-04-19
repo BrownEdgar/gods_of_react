@@ -1,34 +1,27 @@
-import { useState } from 'react'
-import data from './data.json'
+import React, { useEffect } from 'react'
 import './App.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { addCounter, decrement } from './features/counter/counterSlice';
+import axios from 'axios';
+import { savePosts } from './features/posts/postsSlice';
 
-function App() {
-  const [users, setusers] = useState(data)
+export default function App() {
+  const count = useSelector(state => state.counter);
+  const posts = useSelector(state => state.posts)
+  const dispatch = useDispatch()
 
-  const handleChange = () => {
-    setusers((prevUsers) => {
-      return prevUsers.map(elem => {
-        if (elem.name == "Jhon") {
-          elem.name = 'Karen'
-        }
-        return elem;
-      })
-    })
-  }
+  useEffect(() => {
+    axios('https://jsonplaceholder.typicode.com/posts?_limit=8')
+      .then(res => dispatch(savePosts(res.data)))
+  }, [])
+
 
   return (
-    <div className='App'>
-      <h1>Ract + VITE</h1>
-      {
-        users.map(elem => {
-          return <h2 key={elem.id}>{elem.name}</h2>
-        })
-      }
-      <button onClick={handleChange}>change Jhon name</button>
+    <div>
+      <h1>redux count : {count}</h1>
+      <h1>posts:{JSON.stringify(posts)}</h1>
+      <button onClick={() => dispatch(addCounter())}>add count</button>
+      <button onClick={() => dispatch(decrement())}>Minus</button>
     </div>
   )
 }
-
-export default App;
-
-
