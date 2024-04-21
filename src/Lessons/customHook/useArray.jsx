@@ -6,7 +6,7 @@ export default function useArray({ count = 18, min = 0, max = 54 }) {
   });
 
   
-  const sort = () => setDataArr(dataArr.toSorted((a, b) => a - b));
+  const sort = setDataArr(dataArr.toSorted((a, b) => a - b));
 
-  return [dataArr,  {sort} ];
+  return [dataArr, { sort }];
 }
