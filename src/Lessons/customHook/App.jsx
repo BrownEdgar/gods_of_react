@@ -4,6 +4,7 @@ import React from "react";
 // import useArray from "./useArray";
 import useArrayTwo from "./useArrayTwo";
 import './App.scss'
+// import Title from "Lessons/UI/Title/Title";
 
 export default function App() {
   // const [state, { plus, minus, reset, addRandom }] = useCustomHook(0);
@@ -19,6 +20,7 @@ export default function App() {
 
   return (
     <div className="useCustomHook">
+      {/* <Title title='customHook' color='pink'/> */}
       {/* <h2>{state}</h2>
       <button onClick={plus}>Plus</button>
       <button onClick={minus}>Minus</button>
