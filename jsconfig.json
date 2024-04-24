@@ -1,15 +1,14 @@
 {
-    "compilerOptions": {
-        "jsx": "react-jsx",
-        "module": "ESNext",
-        "moduleResolution": "Node",
-        "resolveJsonModule": true,
-        "strict": true,
-        "baseUrl": "src",
-        "paths": {
-            "@/*": [
-                "components/*"
-            ],
-        }
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "strict": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["components/*"],
+     
     }
+  }
 }

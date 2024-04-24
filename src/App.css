@@ -2,15 +2,20 @@
   text-align: center;
   font-size: 4em;
   color: royalblue;
+
 }
 
 .App>button {
   color: #fff;
   background-color: royalblue;
   font-size: 18px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 0;
+  margin-left: 10px;
 }
 
 .App>button:active {
   scale: 0.95;
-  background-color: rgb(53, 86, 184);
+ 
 }
