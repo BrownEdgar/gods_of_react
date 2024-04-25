@@ -1,19 +1,19 @@
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import "./App.css";
+import axios from "axios";
 import {
   addCounter,
   addRandom,
   minusCounter,
   resetCounter,
-} from "./features/counter/counterSlice";
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import "./App.css";
-import axios from "axios";
-import { savePosts } from "./features/posts/postsSlice";
-import { saveTodos } from "./features/todos/todosSlice";
+} from "@f/counter/counterSlice";
+import { saveTodos } from "@f/todos/todosSlice";
+import { savePosts } from "@f/posts/postsSlice";
 
 export default function App() {
   const count = useSelector((state) => state.counter);
-  const post = useSelector((state) => state.posts);
+  const posts = useSelector((state) => state.posts);
   const todos = useSelector((state) => state.todos);
 
   const dispatch = useDispatch();
@@ -44,7 +44,7 @@ export default function App() {
       <button onClick={() => dispatch(resetCounter())}>reset</button>
       <button onClick={() => dispatch(addRandom(random))}>add random</button>
       <h1>Posts</h1>
-      <pre>{JSON.stringify(post, null, 1)}</pre>
+      <pre>{JSON.stringify(posts, null, 1)}</pre>
       <h1>Todos</h1>
       <pre>{JSON.stringify(todos, null, 1)}</pre>
     </div>
