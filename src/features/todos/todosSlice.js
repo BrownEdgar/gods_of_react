@@ -15,7 +15,7 @@ const todosSlice = createSlice({
   name: "todos",
   initialState: {
     data: [],
-    status: "empty",
+    status: "edle",
   },
 
   selectors: {
