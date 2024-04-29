@@ -1,8 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const getPosts = createAsyncThunk("posts/getPosts",
- async (postId) => {
+export const getPosts = createAsyncThunk("posts/getPosts", async (postId) => {
   const response = await axios(
     `https://jsonplaceholder.typicode.com/posts${postId}`
   );
@@ -16,7 +15,6 @@ const postsSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getPosts.fulfilled, (state, action) => {
       return state.push(action.payload);
-     
     });
   },
 });

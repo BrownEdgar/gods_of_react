@@ -14,8 +14,21 @@ const productsSlice = createSlice({
   initialState: {
     data: [],
     loading: false,
+    filter: "all",
   },
-  reducers: {},
+  reducers: {
+    channgeFilter(state, action) {
+      return (state.filter = action.payload);
+    },
+  },
+  selectors: {
+    selectProducts(state, action) {
+      if (state.filter === "all") {
+        return state.data;
+      }
+      return state.data.filter((product) => product.category === state.filter);
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getProducts.pending, (state, action) => {
@@ -33,3 +46,5 @@ const productsSlice = createSlice({
 });
 
 export default productsSlice.reducer;
+export const { channgeFilter } = productsSlice.actions;
+export const { selectProducts } = productsSlice.selectors;
