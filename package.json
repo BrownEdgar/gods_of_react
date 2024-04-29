@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "concurrently \"npm run dev\" \"npx json-server db.json\"",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -16,6 +17,7 @@
     "boxicons": "^2.1.4",
     "classname": "^0.0.0",
     "classnames": "^2.5.1",
+    "concurrently": "^8.2.2",
     "formik": "^2.4.5",
     "json-server": "^1.0.0-alpha.23",
     "nanoid": "^5.0.6",

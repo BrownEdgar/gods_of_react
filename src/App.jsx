@@ -4,6 +4,16 @@ import { addCounter, decrement } from './features/counter/counterSlice'
 import axios from 'axios'
 import { savePosts } from './features/posts/postsSlice'
 import { saveTodods } from './features/todos/tododsSlice'
+import { changeFilter, getProducts } from './features/products/productsSlice'
+import Products from './componenets/Products/Products'
+
+const categories = [
+  "all",
+  "electronics",
+  "jewelery",
+  "men's clothing",
+  "women's clothing",
+]
 
 export default function App() {
     const count = useSelector(state => state.counter)
@@ -18,6 +28,16 @@ export default function App() {
       axios('https://jsonplaceholder.typicode.com/todos?_limit=5')
       .then(res => dispatch(saveTodods(res.data)))
     }, [])
+
+    useEffect(() => {
+      dispatch(getProducts())
+    }, [])
+
+    const handleChange = (e)=>{
+      dispatch(changeFilter(e.target.value))
+  
+    }
+    
     
     
   return (
@@ -28,6 +48,14 @@ export default function App() {
         <p>posts: {JSON.stringify(posts)}</p>
         <br />
         <p>todos: {JSON.stringify(todos)}</p>
+        <select name="category" id="category" onChange={handleChange}>
+          {categories.map(elem=>{
+            return <option value={elem} key={elem}>
+              {elem}
+            </option>
+          })}
+        </select>
+        <Products/>
     </div>
   )
 }
