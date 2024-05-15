@@ -1,34 +1,40 @@
-import { useState } from 'react'
-import data from './data.json'
+import Provider from './i18n/Provider'
+import Translate from './i18n/Translate'
+import LOCALES from './i18n/locale'
+import { useEffect, useState } from 'react';
 import './App.css'
 
-function App() {
-  const [users, setusers] = useState(data)
 
-  const handleChange = () => {
-    setusers((prevUsers) => {
-      return prevUsers.map(elem => {
-        if (elem.name == "Jhon") {
-          elem.name = 'Karen'
-        }
-        return elem;
-      })
-    })
+export default function App() {
+  const [language, setLanguage] = useState(() => {
+    return localStorage.getItem('language') || LOCALES.ENGLISH
+  });
+
+  const handleChange = (e) => {
+    setLanguage(e.target.value)
   }
 
+  useEffect(() => {
+    localStorage.setItem('language', language)
+  }, [language])
+
+
   return (
-    <div className='App'>
-      <h1>Ract + VITE</h1>
-      {
-        users.map(elem => {
-          return <h2 key={elem.id}>{elem.name}</h2>
-        })
-      }
-      <button onClick={handleChange}>change Jhon name</button>
-    </div>
+    <Provider locale={language}>
+      <div className='App'>
+        <select name="language" id="language" onChange={handleChange}>
+          <option value={LOCALES.ENGLISH}>en</option>
+          <option value={LOCALES.RUSSIAN}>ru</option>
+          <option value={LOCALES.ARMENIAN}>hy</option>
+        </select>
+        <div className="App__block">
+
+          <Translate id='title' tagName='h1' value={{ version: '^18.2.0' }} />
+          <Translate id='desc' className="box" />
+
+        </div>
+      </div>
+    </Provider>
+
   )
 }
-
-export default App;
-
-

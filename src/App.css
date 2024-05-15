@@ -1,16 +1,24 @@
-.App>h1 {
-  text-align: center;
-  font-size: 4em;
-  color: royalblue;
+.App__block {
+  width: 900px;
+  padding: 1em;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: beige;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 50px auto;
+
 }
 
-.App>button {
-  color: #fff;
-  background-color: royalblue;
-  font-size: 18px;
+.App__block p {
+  font-size: 22px;
+  line-height: 1.6;
+  margin: 12px 0;
+  text-align: justify;
+  text-align-last: center;
 }
 
-.App>button:active {
-  scale: 0.95;
-  background-color: rgb(53, 86, 184);
+select {
+  padding: 0.6rem;
+  width: 120px;
+  margin-top: 20px;
+  font-size: 20px;
 }
