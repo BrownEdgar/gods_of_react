@@ -1,8 +1,10 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAction, createSlice } from '@reduxjs/toolkit';
+
+export const setNumber = createAction('liquid/setnumber')
 
 const counterSlice = createSlice({
   name: "counter",
-  initialState: 0,
+  initialState: 1,
   reducers: {
     addCounter: (state) => {
       return state + 1
@@ -10,6 +12,11 @@ const counterSlice = createSlice({
     decrement: (state) => {
       return state - 1;
     }
+  },
+  extraReducers: (builder) => {
+    builder.addCase(setNumber, (state, action) => {
+      return state + 1
+    })
   }
 })
 

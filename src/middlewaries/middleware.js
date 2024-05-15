@@ -10,7 +10,6 @@ padding:5px;`
 
 const time = (store) => (next) => (action) => {
   console.log(moment().format('hh:mm:ss'))
-
   next(action)
 }
 

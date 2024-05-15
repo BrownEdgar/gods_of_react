@@ -1,14 +1,28 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { setNumber } from '@f/counter/counterSlice';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
+
+
+export const getPosts = createAsyncThunk(
+  'posts/getPosts',
+  async (postId) => {
+    const response = await axios(`https://jsonplaceholder.typicode.com/posts/${postId}`);
+    return response.data
+  }
+)
 
 const postsSlice = createSlice({
   name: 'posts',
   initialState: [],
   reducers: {
-    savePosts(state, action) {
-      return action.payload
-    }
+
+  },
+  extraReducers: (builder) => {
+    builder.addCase(getPosts.fulfilled, (state, action) => {
+      state.push(action.payload)
+    })
   }
+
 })
 
 export default postsSlice.reducer;
-export const { savePosts } = postsSlice.actions
